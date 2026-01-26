@@ -3,119 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> GSMB - Global Sourcing & Manufacturing Bridge </title>
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>GSMB - Global Sourcing & Supply Chain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
-        body { line-height: 1.6; color: #333; }
-        a { text-decoration: none; color: inherit; }
-
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        nav a { margin-left: 30px; font-weight: 600; color: #333; }
-        .logo { height: 60px; }
-
-        .hero { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 90vh; background: url('https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover; color: #fff; padding: 0 20px; }
-        .hero h1 { font-size: 3rem; margin-bottom: 20px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 700px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
-        .hero a { background: #fff; color: #0d47a1; padding: 12px 30px; border-radius: 5px; font-weight: 600; transition: 0.3s; }
-        .hero a:hover { background: #e0e0e0; }
-
-        section { padding: 80px 50px; }
-        section h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; color: #0d47a1; }
-        .content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .content-grid div { text-align: center; }
-        .content-grid i { font-size: 60px; margin-bottom: 20px; color: #0d47a1; }
-
-        .map-container { display: flex; justify-content: center; }
-        .map-container iframe { width: 100%; max-width: 800px; height: 400px; border: none; border-radius: 10px; }
-
-        .contact form { display: flex; flex-direction: column; max-width: 500px; margin: 0 auto; }
-        .contact input, .contact textarea { padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px; }
-        .contact button { padding: 12px; border: none; border-radius: 5px; background: #0d47a1; color: #fff; font-weight: 600; cursor: pointer; transition: 0.3s; }
-        .contact button:hover { background: #1976d2; }
-
-        footer { text-align: center; padding: 30px 20px; background: #f1f1f1; }
-        footer a { margin-left: 10px; color: #0d47a1; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1rem; }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.6)), 
+                        url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
         }
+        .section-line {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #003366;
+        }
+        .section-line::before, .section-line::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #cbd5e1;
+        }
+        .section-line:not(:empty)::before { margin-right: 1.5rem; }
+        .section-line:not(:empty)::after { margin-left: 1.5rem; }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 font-sans text-slate-800">
 
-<header>
-    <img src="logo.png" alt="GSMB Logo" class="logo">
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+    <nav class="bg-white py-4 px-8 flex justify-between items-center shadow-sm sticky top-0 z-50">
+        <div class="flex items-center space-x-2">
+            <div class="bg-[#003366] p-1 rounded-full">
+                <i class="fas fa-globe text-white text-xl"></i>
+            </div>
+            <span class="text-2xl font-bold text-[#003366] tracking-tighter">GSMB</span>
+        </div>
+        <div class="space-x-8 font-medium text-[#003366]">
+            <a href="#" class="hover:underline">About</a>
+            <a href="#" class="hover:underline">Services</a>
+            <a href="#" class="hover:underline">Contact</a>
+        </div>
     </nav>
-</header>
 
-<section class="hero">
-    <h1>GSMB — Connecting Companies to Trusted Manufacturers Worldwide</h1>
-    <p>We simplify sourcing, procurement, and global supply chain management with teams in China, India, Israel, Portugal, and Belgium.</p>
-    <a href="#contact">Contact Us Today</a>
-</section>
+    <header class="hero-bg h-[450px] flex flex-col items-center justify-center text-center text-white px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">GSMB — Connecting Companies to<br>Trusted Manufacturers Worldwide</h1>
+        <p class="max-w-2xl text-lg mb-8 opacity-90">We simplify sourcing, procurement, and global supply chain management with teams in China, India, Israel, Portugal, and Belgium.</p>
+        <button class="bg-[#004a99] hover:bg-[#003366] text-white font-bold py-3 px-10 rounded shadow-lg transition-all">
+            Contact Us Today
+        </button>
+    </header>
 
-<section id="about">
-    <h2>Who We Are</h2>
-    <div class="content-grid">
-        <div>
-            <i class="fas fa-industry"></i>
-            <h3>Supplier Sourcing & Qualification</h3>
+    <section class="max-w-6xl mx-auto py-16 px-4">
+        <h2 class="section-line text-3xl font-bold mb-6">Who We Are</h2>
+        <p class="text-center max-w-3xl mx-auto mb-12 text-[#003366] font-medium leading-relaxed">
+            GSMB is your partner in international sourcing and procurement. We help companies find the right suppliers, ensure manufacturing quality, and manage supply chain operations globally.
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="flex flex-col items-center">
+                <div class="text-[#004a99] text-5xl mb-4"><i class="fas fa-magnifying-glass-chart"></i></div>
+                <h3 class="font-bold text-[#003366] leading-tight">Supplier Sourcing<br>& Qualification</h3>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="text-[#004a99] text-5xl mb-4"><i class="fas fa-file-invoice-dollar"></i></div>
+                <h3 class="font-bold text-[#003366] leading-tight">Procurement &<br>Cost Benchmarking</h3>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="text-[#004a99] text-5xl mb-4"><i class="fas fa-clipboard-check"></i></div>
+                <h3 class="font-bold text-[#003366] leading-tight">Manufacturing<br>Audits & Compliance</h3>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="text-[#004a99] text-5xl mb-4"><i class="fas fa-truck-fast"></i></div>
+                <h3 class="font-bold text-[#003366] leading-tight">International Supply<br>Chain Support</h3>
+            </div>
         </div>
-        <div>
-            <i class="fas fa-chart-line"></i>
-            <h3>Procurement & Cost Benchmarking</h3>
+    </section>
+
+    <section class="bg-gradient-to-b from-white to-blue-50 py-16 border-t border-b border-blue-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="section-line text-3xl font-bold mb-4">Our Global Footprint</h2>
+            <p class="text-center text-[#003366] mb-8">Teams in key locations around the world.</p>
+            
+            <div class="relative mb-12 flex justify-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" class="opacity-20 max-h-[300px]" alt="World Map">
+                <i class="fas fa-location-dot absolute text-[#004a99] top-1/4 left-1/4"></i>
+                <i class="fas fa-location-dot absolute text-[#004a99] top-1/2 left-[55%]"></i>
+                <i class="fas fa-location-dot absolute text-[#004a99] top-1/3 left-[48%]"></i>
+            </div>
+
+            <div class="flex justify-center space-x-12 border-t border-blue-200 pt-6 text-[#003366] font-bold">
+                <span>China</span>
+                <span class="border-l border-blue-200 pl-12">India</span>
+                <span class="border-l border-blue-200 pl-12">Israel</span>
+                <span class="border-l border-blue-200 pl-12">Portugal</span>
+                <span class="border-l border-blue-200 pl-12">Belgium</span>
+            </div>
         </div>
-        <div>
-            <i class="fas fa-clipboard-check"></i>
-            <h3>Manufacturing Audits & Compliance</h3>
+    </section>
+
+    <section class="max-w-6xl mx-auto py-16 px-4">
+        <h2 class="section-line text-3xl font-bold mb-6">Our Clients</h2>
+        <p class="text-center mb-12">We work with <b>Industrial Companies</b>, EPCs, Importers, Distributors, and <b>International</b> Groups.</p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-[#003366]">
+            <div>
+                <i class="fas fa-industry text-5xl mb-4"></i>
+                <p class="font-bold">Industrial Firms</p>
+            </div>
+            <div>
+                <i class="fas fa-truck-pickup text-5xl mb-4"></i>
+                <p class="font-bold">EPCs</p>
+            </div>
+            <div>
+                <i class="fas fa-boxes-packing text-5xl mb-4"></i>
+                <p class="font-bold">Importers & Distributors</p>
+            </div>
+            <div>
+                <i class="fas fa-earth-americas text-5xl mb-4"></i>
+                <p class="font-bold">Global Enterprises</p>
+            </div>
         </div>
-        <div>
-            <i class="fas fa-globe"></i>
-            <h3>International Supply Chain Support</h3>
+    </section>
+
+    <section class="bg-white py-16 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="section-line text-3xl font-bold mb-4">Get In Touch</h2>
+            <p class="text-center text-[#004a99] font-medium mb-12">Start your sourcing journey with GSMB today.</p>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-4 pt-4">
+                    <p class="font-bold text-[#003366]">Email: miki@gsmb.net</p>
+                    <div class="h-[1px] bg-slate-200 w-full"></div>
+                    <div class="h-[1px] bg-slate-200 w-full"></div>
+                    <div class="h-[1px] bg-slate-200 w-full"></div>
+                </div>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full border border-slate-300 p-2 rounded">
+                    <input type="email" placeholder="Email" class="w-full border border-slate-300 p-2 rounded">
+                    <textarea placeholder="Message" rows="3" class="w-full border border-slate-300 p-2 rounded"></textarea>
+                    <button class="w-full bg-[#004a99] text-white py-2 font-bold rounded hover:bg-[#003366]">Send Message</button>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="services">
-    <h2>Our Global Footprint</h2>
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1N1oxD0I2n6c6sVv9UexTt8QJr7A&hl=en" allowfullscreen></iframe>
-    </div>
-    <p style="text-align:center; margin-top:20px;">Active teams in China, India, Israel, Portugal, and Belgium providing local expertise and global reach.</p>
-</section>
-
-<section id="clients">
-    <h2>Our Clients</h2>
-    <div class="content-grid">
-        <div><h3>Industrial Companies</h3></div>
-        <div><h3>EPCs</h3></div>
-        <div><h3>Importers & Distributors</h3></div>
-        <div><h3>International Groups</h3></div>
-    </div>
-</section>
-
-<section id="contact" class="contact">
-    <h2>Get in Touch</h2>
-    <p style="text-align:center; margin-bottom:30px;">Start your sourcing journey with GSMB today. Send us an email or fill out the form below.</p>
-    <form action="mailto:miki@gsmb.net" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-
-<footer>
-    <p>© 2026 GSMB. All rights reserved. <a href="https://www.linkedin.com/company/global-solutions-mb/?viewAsMember=true" target="_blank">LinkedIn</a></p>
-</footer>
+    <footer class="bg-[#003366] text-white py-4 px-8 flex justify-between items-center text-sm">
+        <p>&copy; 2026 GSMB. All rights reserved.</p>
+        <a href="#" class="text-xl hover:text-blue-300"><i class="fab fa-linkedin"></i></a>
+    </footer>
 
 </body>
 </html>
-
