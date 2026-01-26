@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> GSMB - Global Sourcing & Supply Chain</title>
+    <title>GSMB - Global Sourcing & Supply Chain</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        html { scroll-behavior: smooth; }
         .hero-bg {
-            background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.6)), 
-                        url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(0, 51, 102, 0.65), rgba(0, 51, 102, 0.65)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
         }
@@ -26,130 +27,171 @@
         }
         .section-line:not(:empty)::before { margin-right: 1.5rem; }
         .section-line:not(:empty)::after { margin-left: 1.5rem; }
+        
+        .pin:hover::after {
+            content: attr(title);
+            position: absolute;
+            background: #003366;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            z-index: 10;
+        }
     </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800">
+<body class="bg-slate-50 font-sans text-slate-700 text-base">
 
-    <nav class="bg-white py-4 px-8 flex justify-between items-center shadow-sm sticky top-0 z-50">
-        <div class="flex items-center space-x-2">
-            <div class="bg-[#003366] p-1 rounded-full">
-                <i class="fas fa-globe text-white text-xl"></i>
-            </div>
-            <span class="text-2xl font-bold text-[#003366] tracking-tighter">GSMB</span>
+    <nav class="bg-white py-4 px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
+        <div class="flex items-center">
+            <img src="logo.png" alt="GSMB Logo" class="h-12 border-0">
         </div>
-        <div class="space-x-8 font-medium text-[#003366]">
-            <a href="#" class="hover:underline">About</a>
-            <a href="#" class="hover:underline">Services</a>
-            <a href="#" class="hover:underline">Contact</a>
+        <div class="hidden md:flex space-x-8 font-semibold text-[#003366] text-lg">
+            <a href="#about" class="hover:text-blue-600 transition">About</a>
+            <a href="#services" class="hover:text-blue-600 transition">Services</a>
+            <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
         </div>
     </nav>
 
-    <header class="hero-bg h-[450px] flex flex-col items-center justify-center text-center text-white px-4">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">GSMB — Connecting Companies to<br>Trusted Manufacturers Worldwide</h1>
-        <p class="max-w-2xl text-lg mb-8 opacity-90">We simplify sourcing, procurement, and global supply chain management with teams in China, India, Israel, Portugal, and Belgium.</p>
-        <button class="bg-[#004a99] hover:bg-[#003366] text-white font-bold py-3 px-10 rounded shadow-lg transition-all">
+    <header class="hero-bg h-[600px] flex flex-col items-center justify-center text-center text-white px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-10 tracking-tight">GSMB — Connecting Companies to<br>Trusted Manufacturers Worldwide</h1>
+        <p class="max-w-4xl text-xl md:text-2xl mb-14 opacity-100 leading-relaxed font-semibold tracking-wide">
+            We simplify sourcing, procurement, and global supply chain management<br class="hidden md:block"> 
+            with teams in China, India, Israel, Portugal, and Belgium.
+        </p>
+        <a href="mailto:info@gsmb.net" class="bg-[#004a99] hover:bg-[#003366] text-white font-semibold py-4 px-12 rounded shadow-xl transition-all uppercase tracking-widest text-base border border-blue-400/30">
             Contact Us Today
-        </button>
+        </a>
     </header>
 
-    <section class="max-w-6xl mx-auto py-16 px-4">
-        <h2 class="section-line text-3xl font-bold mb-6">Who We Are</h2>
-        <p class="text-center max-w-3xl mx-auto mb-12 text-[#003366] font-medium leading-relaxed">
-            GSMB is your partner in international sourcing and procurement. We help companies find the right suppliers, ensure manufacturing quality, and manage supply chain operations globally.
+    <section id="services" class="max-w-7xl mx-auto py-20 px-6">
+        <h2 class="section-line text-2xl font-bold mb-10 uppercase tracking-widest text-slate-400">What We Do</h2>
+        <p class="text-center max-w-4xl mx-auto mb-16 text-[#003366] text-xl font-medium leading-relaxed italic opacity-80">
+            "We provide end-to-end supply chain solutions, from identifying the right manufacturers to ensuring every product meets your quality standards before it leaves the factory."
         </p>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div class="flex flex-col items-center">
-                <div class="text-[#004a99] text-5xl mb-4"><i class="fas fa-magnifying-glass-chart"></i></div>
-                <h3 class="font-bold text-[#003366] leading-tight">Supplier Sourcing<br>& Qualification</h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div class="flex flex-col items-center bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+                <div class="text-[#004a99] text-5xl mb-6 opacity-80"><i class="fas fa-magnifying-glass-location"></i></div>
+                <h3 class="font-bold text-[#003366] text-lg leading-snug tracking-tight">Supplier Sourcing<br>& Qualification</h3>
             </div>
-            <div class="flex flex-col items-center">
-                <div class="text-[#004a99] text-5xl mb-4"><i class="fas fa-file-invoice-dollar"></i></div>
-                <h3 class="font-bold text-[#003366] leading-tight">Procurement &<br>Cost Benchmarking</h3>
+            <div class="flex flex-col items-center bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+                <div class="text-[#004a99] text-5xl mb-6 opacity-80"><i class="fas fa-chart-line"></i></div>
+                <h3 class="font-bold text-[#003366] text-lg leading-snug tracking-tight">Procurement &<br>Cost Benchmarking</h3>
             </div>
-            <div class="flex flex-col items-center">
-                <div class="text-[#004a99] text-5xl mb-4"><i class="fas fa-clipboard-check"></i></div>
-                <h3 class="font-bold text-[#003366] leading-tight">Manufacturing<br>Audits & Compliance</h3>
+            <div class="flex flex-col items-center bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+                <div class="text-[#004a99] text-5xl mb-6 opacity-80"><i class="fas fa-file-shield"></i></div>
+                <h3 class="font-bold text-[#003366] text-lg leading-snug tracking-tight">Manufacturing<br>Audits & Compliance</h3>
             </div>
-            <div class="flex flex-col items-center">
-                <div class="text-[#004a99] text-5xl mb-4"><i class="fas fa-truck-fast"></i></div>
-                <h3 class="font-bold text-[#003366] leading-tight">International Supply<br>Chain Support</h3>
+            <div class="flex flex-col items-center bg-white p-8 rounded-xl shadow-sm border border-slate-100">
+                <div class="text-[#004a99] text-5xl mb-6 opacity-80"><i class="fas fa-ship"></i></div>
+                <h3 class="font-bold text-[#003366] text-lg leading-snug tracking-tight">International Supply<br>Chain Support</h3>
             </div>
         </div>
     </section>
 
-    <section class="bg-gradient-to-b from-white to-blue-50 py-16 border-t border-b border-blue-100">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="section-line text-3xl font-bold mb-4">Our Global Footprint</h2>
-            <p class="text-center text-[#003366] mb-8">Teams in key locations around the world.</p>
+    <section id="about" class="bg-white py-20 border-t border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="section-line text-2xl font-bold mb-4 uppercase tracking-widest text-slate-400">Our Global Footprint</h2>
+            <p class="text-center text-slate-500 mb-12 font-medium text-sm uppercase tracking-[0.2em]">Teams in key locations around the world</p>
             
-            <div class="relative mb-12 flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" class="opacity-20 max-h-[300px]" alt="World Map">
-                <i class="fas fa-location-dot absolute text-[#004a99] top-1/4 left-1/4"></i>
-                <i class="fas fa-location-dot absolute text-[#004a99] top-1/2 left-[55%]"></i>
-                <i class="fas fa-location-dot absolute text-[#004a99] top-1/3 left-[48%]"></i>
+            <div class="relative mb-12 flex justify-center w-full max-w-4xl mx-auto">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" class="opacity-20 w-full" alt="World Map">
+                <i class="pin fas fa-location-dot absolute text-red-500 text-2xl cursor-pointer opacity-80" style="top: 12%; left: 48.5%;" title="Belgium"></i>
+                <i class="pin fas fa-location-dot absolute text-red-500 text-2xl cursor-pointer opacity-80" style="top: 22%; left: 43.5%;" title="Portugal"></i>
+                <i class="pin fas fa-location-dot absolute text-red-500 text-2xl cursor-pointer opacity-80" style="top: 25%; left: 55.5%;" title="Israel"></i>
+                <i class="pin fas fa-location-dot absolute text-red-500 text-2xl cursor-pointer opacity-80" style="top: 32%; left: 66%;" title="India"></i>
+                <i class="pin fas fa-location-dot absolute text-red-500 text-2xl cursor-pointer opacity-80" style="top: 24%; left: 79%;" title="China"></i>
             </div>
 
-            <div class="flex justify-center space-x-12 border-t border-blue-200 pt-6 text-[#003366] font-bold">
+            <div class="flex flex-wrap justify-center gap-x-12 gap-y-4 text-slate-400 font-semibold text-lg uppercase tracking-widest">
                 <span>China</span>
-                <span class="border-l border-blue-200 pl-12">India</span>
-                <span class="border-l border-blue-200 pl-12">Israel</span>
-                <span class="border-l border-blue-200 pl-12">Portugal</span>
-                <span class="border-l border-blue-200 pl-12">Belgium</span>
+                <span class="hidden md:block border-l border-slate-200 h-6"></span>
+                <span>India</span>
+                <span class="hidden md:block border-l border-slate-200 h-6"></span>
+                <span>Israel</span>
+                <span class="hidden md:block border-l border-slate-200 h-6"></span>
+                <span>Portugal</span>
+                <span class="hidden md:block border-l border-slate-200 h-6"></span>
+                <span>Belgium</span>
             </div>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto py-16 px-4">
-        <h2 class="section-line text-3xl font-bold mb-6">Our Clients</h2>
-        <p class="text-center mb-12">We work with <b>Industrial Companies</b>, EPCs, Importers, Distributors, and <b>International</b> Groups.</p>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-[#003366]">
-            <div>
-                <i class="fas fa-industry text-5xl mb-4"></i>
-                <p class="font-bold">Industrial Firms</p>
+    <section class="max-w-6xl mx-auto py-20 px-6">
+        <h2 class="section-line text-2xl font-bold mb-10 uppercase tracking-widest text-slate-400">Our Clients</h2>
+        <p class="text-center mb-16 text-xl leading-relaxed text-slate-600">
+            We work with Industrial Companies, EPCs, Importers, Distributors, and International Groups.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center text-[#003366]">
+            <div class="group">
+                <i class="fas fa-city text-5xl mb-6 opacity-70 group-hover:text-blue-600 transition-colors"></i>
+                <p class="font-bold text-base tracking-wider">Industrial Firms</p>
             </div>
-            <div>
-                <i class="fas fa-truck-pickup text-5xl mb-4"></i>
-                <p class="font-bold">EPCs</p>
+            <div class="group">
+                <i class="fas fa-helmet-safety text-5xl mb-6 opacity-70 group-hover:text-blue-600 transition-colors"></i>
+                <p class="font-bold text-base tracking-wider">EPCs</p>
             </div>
-            <div>
-                <i class="fas fa-boxes-packing text-5xl mb-4"></i>
-                <p class="font-bold">Importers & Distributors</p>
+            <div class="group">
+                <i class="fas fa-warehouse text-5xl mb-6 opacity-70 group-hover:text-blue-600 transition-colors"></i>
+                <p class="font-bold text-base tracking-wider">Importers & Distributors</p>
             </div>
-            <div>
-                <i class="fas fa-earth-americas text-5xl mb-4"></i>
-                <p class="font-bold">Global Enterprises</p>
+            <div class="group">
+                <i class="fas fa-globe-americas text-5xl mb-6 opacity-70 group-hover:text-blue-600 transition-colors"></i>
+                <p class="font-bold text-base tracking-wider">Global Enterprises</p>
             </div>
         </div>
     </section>
 
-    <section class="bg-white py-16 border-t border-slate-200">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="section-line text-3xl font-bold mb-4">Get In Touch</h2>
-            <p class="text-center text-[#004a99] font-medium mb-12">Start your sourcing journey with GSMB today.</p>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-4 pt-4">
-                    <p class="font-bold text-[#003366]">Email: miki@gsmb.net</p>
-                    <div class="h-[1px] bg-slate-200 w-full"></div>
-                    <div class="h-[1px] bg-slate-200 w-full"></div>
-                    <div class="h-[1px] bg-slate-200 w-full"></div>
+    <section id="contact" class="bg-white py-20 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="section-line text-2xl font-bold mb-16 uppercase tracking-widest text-slate-400">Get In Touch</h2>
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+                <div class="space-y-8">
+                    <div class="border-l-4 border-[#003366] pl-6 py-2">
+                        <p class="font-semibold text-slate-400 text-sm mb-1 uppercase tracking-widest">Email Us Directly</p>
+                        <a href="mailto:info@gsmb.net" class="text-[#004a99] font-bold text-2xl hover:text-blue-800 transition-colors">info@gsmb.net</a>
+                    </div>
+                    <p class="text-slate-500 text-base leading-loose">
+                        Whether you are looking to optimize your current supply chain or find new manufacturers, our global team is ready to assist.
+                    </p>
                 </div>
-                <form class="space-y-4">
-                    <input type="text" placeholder="Name" class="w-full border border-slate-300 p-2 rounded">
-                    <input type="email" placeholder="Email" class="w-full border border-slate-300 p-2 rounded">
-                    <textarea placeholder="Message" rows="3" class="w-full border border-slate-300 p-2 rounded"></textarea>
-                    <button class="w-full bg-[#004a99] text-white py-2 font-bold rounded hover:bg-[#003366]">Send Message</button>
+                <form id="contact-form" class="space-y-4 bg-slate-50 p-8 rounded-xl border border-slate-100">
+                    <input type="text" name="name" placeholder="Name" required class="w-full border border-slate-200 p-3 rounded focus:border-blue-400 outline-none text-base bg-white">
+                    <input type="email" name="email" placeholder="Email" required class="w-full border border-slate-200 p-3 rounded focus:border-blue-400 outline-none text-base bg-white">
+                    <textarea name="message" placeholder="How can we help?" rows="4" required class="w-full border border-slate-200 p-3 rounded focus:border-blue-400 outline-none text-base bg-white"></textarea>
+                    <button type="submit" class="w-full bg-[#004a99] text-white py-4 font-bold rounded hover:bg-[#003366] transition-all text-base uppercase tracking-widest shadow-md">Send Message</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="bg-[#003366] text-white py-4 px-8 flex justify-between items-center text-sm">
-        <p>&copy; 2026 GSMB. All rights reserved.</p>
-        <a href="#" class="text-xl hover:text-blue-300"><i class="fab fa-linkedin"></i></a>
+    <footer class="bg-[#003366] text-white py-10 px-12 flex flex-col md:flex-row justify-between items-center text-base">
+        <p class="mb-4 md:mb-0 opacity-60">&copy; 2026 GSMB. All rights reserved.</p>
+        <div class="flex items-center space-x-10">
+            <span class="opacity-40 font-semibold uppercase tracking-[0.3em] text-xs">Connecting Global Excellence</span>
+            <a href="https://www.linkedin.com/company/global-solutions-mb/" target="_blank" class="text-4xl hover:text-blue-300 transition-colors opacity-80">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = this.querySelector('input[name="name"]').value;
+            
+            // Professional feedback alert
+            alert(`Thank you, ${name}! Your message has been prepared. Since this is a preview, to actually receive emails, you can connect this form to a service like Formspree.`);
+            
+            // Clear the form fields
+            this.reset();
+        });
+    </script>
 
 </body>
 </html>
