@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WL523JQP');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GSMB - Global Sourcing & Supply Chain</title>
@@ -45,7 +50,8 @@
     </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-700 text-base">
-
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL523JQP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <nav class="bg-white py-6 px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
         <div class="flex items-center">
             <a href="/" class="block transition-transform duration-300 hover:scale-105">
@@ -123,6 +129,31 @@
         </div>
     </section>
 
+    <section class="max-w-6xl mx-auto py-20 px-6">
+        <h2 class="section-line text-2xl font-bold mb-10 uppercase tracking-widest text-slate-400">Our Clients</h2>
+        <p class="text-center mb-16 text-xl leading-relaxed text-slate-600">
+            We work with Industrial Companies, EPCs, Importers, Distributors, and International Groups.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center text-[#003366]">
+            <div class="group">
+                <i class="fas fa-city text-5xl mb-6 opacity-70 group-hover:text-blue-600 transition-colors"></i>
+                <p class="font-bold text-base tracking-wider">Industrial Firms</p>
+            </div>
+            <div class="group">
+                <i class="fas fa-helmet-safety text-5xl mb-6 opacity-70 group-hover:text-blue-600 transition-colors"></i>
+                <p class="font-bold text-base tracking-wider">EPCs</p>
+            </div>
+            <div class="group">
+                <i class="fas fa-warehouse text-5xl mb-6 opacity-70 group-hover:text-blue-600 transition-colors"></i>
+                <p class="font-bold text-base tracking-wider">Importers & Distributors</p>
+            </div>
+            <div class="group">
+                <i class="fas fa-globe-americas text-5xl mb-6 opacity-70 group-hover:text-blue-600 transition-colors"></i>
+                <p class="font-bold text-base tracking-wider">Global Enterprises</p>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="bg-white py-20 border-t border-slate-200">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="section-line text-2xl font-bold mb-16 uppercase tracking-widest text-slate-400">Get In Touch</h2>
@@ -168,7 +199,6 @@
                 const btn = document.getElementById("submit-btn");
                 const container = document.getElementById("form-container");
                 
-                // Show loading state
                 btn.disabled = true;
                 btn.innerText = "Sending...";
 
@@ -182,29 +212,25 @@
                     });
 
                     if (response.ok) {
-                        // This part replaces the form with your custom success message
                         container.innerHTML = `
-                            <div class="bg-green-50 border border-green-200 p-10 rounded-xl text-center shadow-sm transition-all duration-500">
+                            <div class="bg-green-50 border border-green-200 p-10 rounded-xl text-center shadow-sm">
                                 <i class="fas fa-check-circle text-green-500 text-6xl mb-4"></i>
                                 <h3 class="text-[#003366] text-2xl font-bold mb-2">Message Sent!</h3>
                                 <p class="text-slate-600">Thank you for reaching out. We have received your inquiry and will get back to you shortly.</p>
                                 <button onclick="window.location.reload()" class="mt-6 text-sm text-[#004a99] hover:underline font-semibold">Send another message</button>
                             </div>`;
                     } else {
-                        // Fallback if Formspree returns an error
-                        alert("There was an issue sending your message. Please try again or email us directly at info@gsmb.net");
+                        alert("There was an issue sending your message. Please try again.");
                         btn.disabled = false;
                         btn.innerText = "Send Message";
                     }
                 } catch (error) {
-                    // Fallback if there is a network error
-                    alert("Network error. Please check your connection and try again.");
+                    alert("Network error. Please try again.");
                     btn.disabled = false;
                     btn.innerText = "Send Message";
                 }
             });
         }
     </script>
-
 </body>
 </html>
