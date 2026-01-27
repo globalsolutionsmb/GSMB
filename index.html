@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> GSMB - Global Sourcing & Supply Chain</title>
+    <title>GSMB - Global Sourcing & Supply Chain</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -46,11 +46,13 @@
 </head>
 <body class="bg-slate-50 font-sans text-slate-700 text-base">
 
-    <nav class="bg-white py-4 px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
+    <nav class="bg-white py-6 px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
         <div class="flex items-center">
-            <img src="logo.png" alt="GSMB Logo" class="h-12 border-0">
+            <a href="/" class="block transition-transform duration-300 hover:scale-105">
+                <img src="logo.png" alt="GSMB Logo" class="h-16 md:h-24 w-auto border-0">
+            </a>
         </div>
-        <div class="hidden md:flex space-x-8 font-semibold text-[#003366] text-lg">
+        <div class="hidden md:flex space-x-10 font-semibold text-[#003366] text-lg">
             <a href="#about" class="hover:text-blue-600 transition">About</a>
             <a href="#services" class="hover:text-blue-600 transition">Services</a>
             <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
@@ -159,9 +161,10 @@
                         Whether you are looking to optimize your current supply chain or find new manufacturers, our global team is ready to assist.
                     </p>
                 </div>
-                <form id="contact-form" class="space-y-4 bg-slate-50 p-8 rounded-xl border border-slate-100">
+                
+                <form action="https://formspree.io/f/mvzavgel" method="POST" class="space-y-4 bg-slate-50 p-8 rounded-xl border border-slate-100">
                     <input type="text" name="name" placeholder="Name" required class="w-full border border-slate-200 p-3 rounded focus:border-blue-400 outline-none text-base bg-white">
-                    <input type="email" name="email" placeholder="Email" required class="w-full border border-slate-200 p-3 rounded focus:border-blue-400 outline-none text-base bg-white">
+                    <input type="email" name="email" placeholder="Your Email" required class="w-full border border-slate-200 p-3 rounded focus:border-blue-400 outline-none text-base bg-white">
                     <textarea name="message" placeholder="How can we help?" rows="4" required class="w-full border border-slate-200 p-3 rounded focus:border-blue-400 outline-none text-base bg-white"></textarea>
                     <button type="submit" class="w-full bg-[#004a99] text-white py-4 font-bold rounded hover:bg-[#003366] transition-all text-base uppercase tracking-widest shadow-md">Send Message</button>
                 </form>
@@ -178,20 +181,6 @@
             </a>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = this.querySelector('input[name="name"]').value;
-            
-            // Professional feedback alert
-            alert(`Thank you, ${name}! Your message has been prepared. Since this is a preview, to actually receive emails, you can connect this form to a service like Formspree.`);
-            
-            // Clear the form fields
-            this.reset();
-        });
-    </script>
 
 </body>
 </html>
