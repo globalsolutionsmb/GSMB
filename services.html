@@ -2,19 +2,26 @@
 <html lang="en">
 <head>
 
+    <!-- Basic Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Our Services | GSMB</title>
 
+    <!-- SEO -->
     <meta name="description"
-          content="GSMB provides global sourcing and supply chain services for electrical cables, PCB/PCBA, construction steel, and mechanical assemblies.">
+          content="GSMB provides global sourcing and supply chain services for electrical cables, PCB/PCBA, construction steel, and industrial mechanical assemblies.">
 
+    <meta name="author" content="GSMB">
+    <meta name="robots" content="index, follow">
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Styles -->
     <style>
 
-        /* Body & Layout */
+        /* Base */
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
@@ -32,7 +39,7 @@
         /* Navigation */
         .nav {
             background: #ffffff;
-            padding: 20px 50px;
+            padding: 24px 48px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -42,8 +49,16 @@
             z-index: 1000;
         }
 
+        /* Logo size (matches homepage) */
         .nav img {
-            height: 60px;
+            height: 64px;
+            width: auto;
+        }
+
+        @media (min-width: 768px) {
+            .nav img {
+                height: 96px;
+            }
         }
 
         .nav a {
@@ -51,6 +66,7 @@
             font-weight: bold;
             color: #003366;
             text-decoration: none;
+            transition: color 0.2s ease;
         }
 
         .nav a:hover {
@@ -61,7 +77,7 @@
         .header {
             background: #003366;
             color: white;
-            padding: 80px 20px;
+            padding: 90px 20px;
             text-align: center;
         }
 
@@ -72,7 +88,7 @@
 
         .header p {
             font-size: 20px;
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             opacity: 0.9;
         }
@@ -87,7 +103,7 @@
         .service-box {
             background: white;
             padding: 40px;
-            border-radius: 10px;
+            border-radius: 12px;
             margin-bottom: 60px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
@@ -116,13 +132,12 @@
             color: #444;
         }
 
-        /* GSMB CTA Block Styles */
+        /* CTA */
         .gsmc-cta {
             background: linear-gradient(135deg, #003366, #006699);
             color: #fff;
             text-align: center;
-            padding: 60px 20px;
-            font-family: Arial, sans-serif;
+            padding: 70px 20px;
         }
 
         .gsmc-cta h2 {
@@ -140,16 +155,16 @@
             display: inline-block;
             margin-top: 25px;
             padding: 15px 35px;
-            background-color: #ff6600;  /* Flashy orange */
+            background-color: #ff6600;
             color: #fff;
             font-weight: bold;
             text-decoration: none;
             border-radius: 8px;
-            transition: background 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
         }
 
         .cta-button:hover {
-            background-color: #e65c00;  /* Darker orange on hover */
+            background-color: #e65c00;
             transform: scale(1.05);
         }
 
@@ -182,148 +197,121 @@
 </div>
 
 <main>
-    <!-- Header -->
-    <div class="header">
-        <h1>Our Services</h1>
-        <p>
-            Global sourcing and supply chain solutions tailored to your technical and
-            commercial requirements.
-        </p>
-    </div>
 
-    <!-- Services -->
-    <div class="services">
-        <!-- Electrical Cables -->
-        <div class="service-box">
-            <h2>Electrical Cables</h2>
-            <div class="service-image">
-                <img src="images/electrical-cables.jpg" alt="Low and medium voltage electrical cables, copper drums and solar PV cables" loading="lazy">
-            </div>
-            <p>
-                GSMB specializes in sourcing low, medium, and high-voltage electrical cables,
-                including copper conductor cables and solar PV cables, for industrial,
-                infrastructure, and renewable energy projects.
-                <br><br>
-                We work exclusively with qualified manufacturers that comply with
-                international standards and certifications, ensuring consistent quality,
-                competitive pricing, and reliable delivery worldwide.
-            </p>
-        </div>
+<!-- Header -->
+<div class="header">
+    <h1>Our Services</h1>
+    <p>
+        Global sourcing and supply chain solutions tailored to your technical
+        and commercial requirements.
+    </p>
+</div>
 
-        <!-- PCB / PCBA -->
-        <div class="service-box">
-            <h2>PCB & PCBA (Including Class 3)</h2>
-            <div class="service-image">
-                <img src="images/pcb-pcba-class3.jpg" alt="High reliability PCB and PCBA manufacturing including Class 3 for aerospace, medical, automotive and industrial applications" loading="lazy">
-            </div>
-            <p>
-                GSMB provides full-service sourcing for printed circuit boards and electronic
-                assemblies, including high-reliability IPC Class 3 PCBA for military, aerospace,
-                automotive, medical, and industrial applications.
-                <br><br>
-                Our capabilities include advanced SMT and THT assembly, cleanroom production,
-                functional testing, and full traceability, ensuring compliance with the most
-                demanding technical and regulatory standards.
-                <br><br>
-                We support our clients throughout the entire process, from prototype to mass
-                production, with strict supplier qualification and continuous quality monitoring.
-            </p>
-        </div>
+<!-- Services -->
+<div class="services">
 
-        <!-- Construction Steel -->
-        <div class="service-box">
-            <h2>Construction Steel & Solar Mounting Solutions</h2>
-            <div class="service-image">
-                <img src="images/steel.jpg" alt="Hot-dip galvanized IPE, UPN, W and H steel profiles and solar mounting pylons for construction and renewable energy projects" loading="lazy">
-            </div>
-            <p>
-                GSMB supplies high-quality structural steel for solar, infrastructure,
-                and construction projects worldwide.
-                <br><br>
-                Our portfolio includes hot-dip galvanized IPE and UPN profiles,
-                W and H beams, and solar mounting piles engineered for durability,
-                structural integrity, and long-term outdoor performance.
-                <br><br>
-                We support EPC contractors, solar developers, and construction companies
-                with flexible sourcing strategies, including both Chinese and
-                non-Chinese origin options depending on project requirements.
-                <br><br>
-                Available steel grades include S235, S275, and S355,
-                fully compliant with international standards.
-            </p>
-        </div>
-
-        <!-- Mechanical Assemblies -->
-        <div class="service-box">
-            <h2>Industrial Mechanical Assemblies</h2>
-            <div class="service-image">
-                <img src="images/mechanical-assemblies.jpg" alt="Industrial mechanical assemblies including welded frames, structural brackets, fabricated components and sub-assemblies for OEM and infrastructure projects" loading="lazy">
-            </div>
-            <p>
-                GSMB supports OEM and industrial clients with the sourcing and
-                coordination of precision mechanical parts, fabricated components,
-                and complete sub-assemblies.
-                <br><br>
-                Our capabilities include welded structures, structural brackets,
-                machined components, sheet metal fabrication, and integrated
-                mechanical assemblies built to international quality standards.
-                <br><br>
-                We manage supplier qualification, production supervision,
-                quality control inspections, and logistics to ensure reliable
-                integration into your manufacturing, infrastructure, or energy projects.
-                <br><br>
-                From prototype batches to large-scale production,
-                we provide transparent communication, competitive pricing,
-                and dependable execution.
-            </p>
-        </div>
-
-    <!-- Worldwide Coverage & Strategic Sourcing Advantage -->
+    <!-- Electrical Cables -->
     <div class="service-box">
-        <h2>Worldwide Coverage & Strategic Sourcing Advantage</h2>
-
-        <!-- Image will be added later -->
-        <!--
+        <h2>Electrical Cables</h2>
         <div class="service-image">
-            <img src="images/global-sourcing.jpg"
-                 alt="Global sourcing operations with teams in China, India, USA, LATAM, Turkey and Europe"
+            <img src="images/electrical-cables.jpg"
+                 alt="Low and medium voltage electrical cables and solar PV cables"
                  loading="lazy">
         </div>
-        -->
-
         <p>
-            GSMB operates on a truly global scale, supporting projects across
-            North America, Europe, Latin America, the Middle East, and Asia.
+            GSMB specializes in sourcing low, medium, and high-voltage electrical cables,
+            including copper conductor cables and solar PV cables for industrial,
+            infrastructure, and renewable energy projects.
             <br><br>
-            With operational teams in China and India and strong relationships
-            with manufacturers in the USA, LATAM, Turkey, Italy, and other strategic markets,
-            we provide sourcing flexibility tailored to your technical,
-            regulatory, and geopolitical requirements.
-            <br><br>
-            For cost-driven projects, our long-established partnerships in China
-            allow us to secure highly competitive pricing, optimized lead times,
-            and reliable production capacity.
-            <br><br>
-            For projects requiring alternative origin, we leverage our international
-            network to deliver compliant, high-quality solutions without sourcing limitations.
-            <br><br>
-            The result: transparent communication, controlled risk,
-            and a supply chain strategy aligned with your commercial objectives.
+            We work exclusively with qualified manufacturers complying with
+            international standards, ensuring consistent quality,
+            competitive pricing, and reliable delivery.
         </p>
     </div>
 
-        <!-- Strategic CTA -->
-        <section class="gsmc-cta">
-          <div class="cta-container">
-            <h2>Let’s Optimize Your Procurement</h2>
-            <p>If GSMB cannot offer better value than your current setup,<br>
-               it simply means your procurement is already excellent.</p>
-            <p>But most of the time —<br>
-               WE CAN.</p>
-            <a href="mailto:info@gsmb.net" class="cta-button">Contact Us</a>
-          </div>
-        </section>
+    <!-- PCB -->
+    <div class="service-box">
+        <h2>PCB & PCBA (IPC Class 3)</h2>
+        <div class="service-image">
+            <img src="images/pcb-pcba-class3.jpg"
+                 alt="High reliability PCB and PCBA manufacturing"
+                 loading="lazy">
+        </div>
+        <p>
+            We provide full-service sourcing for printed circuit boards and electronic
+            assemblies, including IPC Class 3 PCBA for aerospace, medical,
+            automotive, and industrial applications.
+            <br><br>
+            Capabilities include SMT, THT, functional testing, and full traceability.
+        </p>
     </div>
+
+    <!-- Steel -->
+    <div class="service-box">
+        <h2>Construction Steel & Solar Mounting</h2>
+        <div class="service-image">
+            <img src="images/steel.jpg"
+                 alt="Galvanized steel structures and solar mounting systems"
+                 loading="lazy">
+        </div>
+        <p>
+            GSMB supplies structural steel for solar, infrastructure,
+            and construction projects.
+            <br><br>
+            Profiles include IPE, UPN, W/H beams, and solar piles,
+            compliant with international standards.
+        </p>
+    </div>
+
+    <!-- Mechanical -->
+    <div class="service-box">
+        <h2>Industrial Mechanical Assemblies</h2>
+        <div class="service-image">
+            <img src="images/mechanical-assemblies.jpg"
+                 alt="Industrial mechanical assemblies"
+                 loading="lazy">
+        </div>
+        <p>
+            We support OEM clients with sourcing of welded structures,
+            machined components, sheet metal, and integrated assemblies.
+            <br><br>
+            Services include supplier qualification, inspections,
+            and logistics coordination.
+        </p>
+    </div>
+
+    <!-- Global -->
+    <div class="service-box">
+        <h2>Worldwide Coverage & Strategic Sourcing</h2>
+        <p>
+            GSMB operates globally across North America, Europe,
+            Latin America, Middle East, and Asia.
+            <br><br>
+            With teams in China and India and partners worldwide,
+            we provide sourcing flexibility aligned with
+            regulatory and geopolitical requirements.
+            <br><br>
+            Result: controlled risk, transparency,
+            and optimized supply chains.
+        </p>
+    </div>
+
+</div>
+
+<!-- CTA -->
+<section class="gsmc-cta">
+    <h2>Let’s Optimize Your Procurement</h2>
+
+    <p>
+        If GSMB cannot offer better value than your current setup,<br>
+        it simply means your procurement is already excellent.
+    </p>
+
+    <p><strong>But most of the time — WE CAN.</strong></p>
+
+    <a href="mailto:info@gsmb.net" class="cta-button">Contact Us</a>
+</section>
+
 </main>
 
 <!-- Footer -->
