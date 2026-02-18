@@ -75,6 +75,14 @@ html { scroll-behavior: smooth; }
     white-space: nowrap;
     z-index: 10;
 }
+
+/* Make anchor targets scroll below sticky navbar */
+:target::before {
+    content: "";
+    display: block;
+    height: 6rem; /* Adjust to match navbar height */
+    margin-top: -6rem;
+}
 </style>
 </head>
 
@@ -85,7 +93,7 @@ html { scroll-behavior: smooth; }
 </noscript>
 
 <!-- Navigation -->
-<nav class="bg-white py-6 px-6 md:px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
+<nav class="bg-white py-6 px-6 md:px-12 flex justify-between items-center shadow-sm sticky top-0 z-50 relative">
     <div class="flex items-center">
         <a href="/" class="block transition-transform duration-300 hover:scale-105">
             <img src="logo.png" alt="GSMB Logo" class="h-16 md:h-24 w-auto border-0">
@@ -98,38 +106,28 @@ html { scroll-behavior: smooth; }
         <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
     </div>
 
-<!-- Mobile Menu Button -->
-<div class="md:hidden flex items-center">
-    <button id="mobile-menu-button" class="text-[#003366] text-2xl focus:outline-none">
-        <i class="fas fa-bars"></i>
-    </button>
-</div>
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden flex items-center">
+        <button id="mobile-menu-button" class="text-[#003366] text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
 
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden bg-white shadow-md border-t border-slate-200 md:hidden absolute w-full z-40">
-    <a href="about.html" class="block px-6 py-4 border-b border-slate-200 hover:bg-slate-50">About</a>
-    <a href="services.html" class="block px-6 py-4 border-b border-slate-200 hover:bg-slate-50">Services</a>
-    <a href="#contact" class="block px-6 py-4 hover:bg-slate-50">Contact</a>
-</div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-md z-40 flex flex-col">
+        <a href="about.html" class="block px-6 py-4 border-b border-slate-200 hover:bg-slate-50" onclick="mobileMenu.classList.add('hidden')">About</a>
+        <a href="services.html" class="block px-6 py-4 border-b border-slate-200 hover:bg-slate-50" onclick="mobileMenu.classList.add('hidden')">Services</a>
+        <a href="#contact" class="block px-6 py-4 hover:bg-slate-50" onclick="mobileMenu.classList.add('hidden')">Contact</a>
+    </div>
+</nav>
 
 <script>
 const menuBtn = document.getElementById("mobile-menu-button");
 const mobileMenu = document.getElementById("mobile-menu");
-
-// Toggle menu on hamburger click
 menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
 });
-
-// Close menu when any link inside it is clicked
-document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-    });
-});
 </script>
-
-
 
 <!-- Hero -->
 <header class="hero-bg h-[600px] flex flex-col items-center justify-center text-center text-white px-4">
@@ -149,7 +147,7 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
     <p class="text-center max-w-4xl mx-auto mb-16 text-[#003366] text-xl font-medium leading-relaxed italic opacity-80">
         "We provide end-to-end supply chain solutions, from identifying the right manufacturers to ensuring every product meets your quality standards before it leaves the factory."
     </p>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div class="flex flex-col items-center bg-white p-8 rounded-xl shadow-sm border border-slate-100">
             <div class="text-[#004a99] text-5xl mb-6 opacity-80"><i class="fas fa-magnifying-glass-location"></i></div>
             <h3 class="font-bold text-[#003366] text-lg leading-snug tracking-tight">Supplier Sourcing<br>& Qualification</h3>
@@ -174,8 +172,8 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
     <div class="max-w-6xl mx-auto px-6">
         <h2 class="section-line text-2xl font-bold mb-4 uppercase tracking-widest text-slate-400">Our Global Footprint</h2>
         <p class="text-center text-slate-500 mb-12 font-medium text-sm uppercase tracking-[0.2em]">Teams in key locations around the world</p>
-        <div class="relative mb-12 flex justify-center w-full max-w-4xl mx-auto">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" class="opacity-20 w-full" alt="World Map">
+        <div class="relative mb-12 flex justify-center w-full max-w-full mx-auto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" class="opacity-20 max-w-full h-auto" alt="World Map">
             <i class="pin fas fa-location-dot absolute text-red-500 text-2xl cursor-pointer opacity-80" style="top: 12%; left: 48.5%;" title="Belgium"></i>
             <i class="pin fas fa-location-dot absolute text-red-500 text-2xl cursor-pointer opacity-80" style="top: 22%; left: 43.5%;" title="Portugal"></i>
             <i class="pin fas fa-location-dot absolute text-red-500 text-2xl cursor-pointer opacity-80" style="top: 25%; left: 55.5%;" title="Israel"></i>
@@ -198,7 +196,7 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
     <p class="text-center mb-16 text-xl leading-relaxed text-slate-600">
         We work with Industrial Companies, EPCs, Importers, Distributors, and International Groups.
     </p>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center text-[#003366]">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center text-[#003366]">
         <div class="group">
             <i class="fas fa-city text-5xl mb-6 opacity-70 group-hover:text-blue-600 transition-colors"></i>
             <p class="font-bold text-base tracking-wider">Industrial Firms</p>
@@ -222,7 +220,7 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
 <section id="contact" class="bg-white py-20 border-t border-slate-200">
     <div class="max-w-5xl mx-auto px-6">
         <h2 class="section-line text-2xl font-bold mb-16 uppercase tracking-widest text-slate-400">Get In Touch</h2>
-        <div class="grid md:grid-cols-2 gap-16 items-start">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div class="space-y-8">
                 <div class="border-l-4 border-[#003366] pl-6 py-2">
                     <p class="font-semibold text-slate-400 text-sm mb-1 uppercase tracking-widest">Email Us Directly</p>
@@ -245,7 +243,7 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
 </section>
 
 <!-- Footer -->
-<footer class="bg-[#003366] text-white py-10 px-12 flex flex-col md:flex-row justify-between items-center text-base">
+<footer class="bg-[#003366] text-white py-10 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-base">
     <p class="mb-4 md:mb-0 opacity-60">&copy; 2026 GSMB. All rights reserved.</p>
     <div class="flex items-center space-x-10">
         <span class="opacity-40 font-semibold uppercase tracking-[0.3em] text-xs">Connecting Global Excellence</span>
@@ -276,7 +274,8 @@ if (contactForm) {
 <div class="bg-green-50 border border-green-200 p-10 rounded-xl text-center shadow-sm">
     <i class="fas fa-check-circle text-green-500 text-6xl mb-4"></i>
     <h3 class="text-[#003366] text-2xl font-bold mb-2">Message Sent!</h3>
-    <p class="text-slate-600">Thank you for reaching out. We have received your inquiry and will get back to you shortly.</p>
+    <p class="text-slate-600">Thank you for reaching out. We have received your inquiry and will
+ get back to you shortly.</p>
     <button onclick="window.location.reload()" class="mt-6 text-sm text-[#004a99] hover:underline font-semibold">Send another message</button>
 </div>
                 `;
@@ -296,5 +295,6 @@ if (contactForm) {
 
 </body>
 </html>
+
 
 
