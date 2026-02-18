@@ -75,6 +75,14 @@ html { scroll-behavior: smooth; }
     white-space: nowrap;
     z-index: 10;
 }
+    /* Make anchor targets scroll below sticky navbar */
+:target::before {
+    content: "";
+    display: block;
+    height: 6rem;   /* Adjust to match your navbar height (py-6 = 96px ≈ 6rem) */
+    margin-top: -6rem;
+}
+
 </style>
 </head>
 
@@ -286,4 +294,5 @@ if (contactForm) {
 
 </body>
 </html>
+
 
