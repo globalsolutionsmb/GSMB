@@ -12,7 +12,7 @@
 <meta name="description"
       content="Global sourcing, OEM procurement, and supply chain services for industrial companies. Electrical cables, PCB, steel, and mechanical assemblies.">
 <meta name="keywords"
-      content="global sourcing, OEM procurement, supply chain management, electrical cables, PCB manufacturing, steel sourcing, mechanical assemblies">
+ content="global sourcing, OEM procurement, supply chain management, electrical cables, PCB manufacturing, steel sourcing, mechanical assemblies">
 <link rel="canonical" href="https://www.gsmb.net/services.html">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DW3507CZ82"></script>
@@ -26,7 +26,7 @@ gtag('config', 'G-DW3507CZ82');
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
     html { scroll-behavior: smooth; }
@@ -44,29 +44,31 @@ gtag('config', 'G-DW3507CZ82');
     main {
         flex: 1;
         opacity: 0;
-        transition: opacity 0.8s ease-in;
+        transition: opacity 1s ease-in;
     }
 
-    /* Fixed Blue Banner Style to match Index/About */
+    /* 💎 EXACT Hero Style from Index/About 💎 */
     .hero-bg {
-        background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85));
-        color: white;
-        padding: 100px 20px;
-        text-align: center;
+        background: linear-gradient(rgba(0, 51, 102, 0.75), rgba(0, 51, 102, 0.75)), 
+        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        min-height: 450px;
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 420px;
+        text-align: center;
+        color: white;
     }
 
     .hero-bg h1 {
-        font-size: 48px;
+        font-size: 42px;
         font-weight: bold;
         margin-bottom: 20px;
     }
 
     .hero-bg p {
-        font-size: 24px; /* Matches the About page font size we increased! */
+        font-size: 24px;
         max-width: 900px;
         margin: auto;
         opacity: 0.95;
@@ -98,9 +100,9 @@ gtag('config', 'G-DW3507CZ82');
 
     .service-box h2 {
         color: #003366;
-        font-size: 28px;
-        font-weight: bold;
+        font-size: 26px;
         margin-bottom: 20px;
+        font-weight: bold;
     }
 
     .service-image {
@@ -116,8 +118,8 @@ gtag('config', 'G-DW3507CZ82');
     }
 
     .service-box p {
-        font-size: 18px;
-        line-height: 1.8;
+        font-size: 17px;
+        line-height: 1.7;
         color: #444;
     }
 
@@ -126,21 +128,19 @@ gtag('config', 'G-DW3507CZ82');
         background: linear-gradient(135deg, #003366, #006699);
         color: #fff;
         text-align: center;
-        padding: 80px 20px;
+        padding: 70px 20px;
     }
 
     .cta-button {
         display: inline-block;
         margin-top: 25px;
-        padding: 16px 40px;
+        padding: 15px 35px;
         background-color: #ff6600;
         color: #fff;
         font-weight: bold;
         text-decoration: none;
         border-radius: 8px;
         transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
     }
 
     .cta-button:hover {
@@ -153,10 +153,10 @@ gtag('config', 'G-DW3507CZ82');
 
 <body class="bg-slate-50 font-sans text-slate-700 text-base">
 
-<nav class="bg-white py-4 px-6 md:px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
+<nav class="bg-white py-6 px-6 md:px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
     <div class="flex items-center">
         <a href="index.html" class="block transition-transform duration-300 hover:scale-105">
-            <img src="logo.png" alt="GSMB Logo" class="h-20 md:h-28 w-auto border-0 object-contain">
+            <img src="logo.png" alt="GSMB Logo" class="h-16 md:h-24 w-auto border-0 object-contain">
         </a>
     </div>
 
@@ -174,7 +174,7 @@ gtag('config', 'G-DW3507CZ82');
     </div>
 </nav>
 
-<div id="mobile-menu" class="hidden bg-white shadow-2xl border-b border-slate-200 md:hidden absolute w-full z-40 left-0 top-[100px]">
+<div id="mobile-menu" class="hidden bg-white shadow-2xl border-b border-slate-200 md:hidden absolute w-full z-40 left-0 top-[112px]">
     <div class="flex flex-col font-bold text-[#003366] bg-white">
         <a href="index.html" class="px-8 py-6 border-b border-slate-100 block">Home</a>
         <a href="about.html" class="px-8 py-6 border-b border-slate-100 block">About</a>
@@ -185,14 +185,14 @@ gtag('config', 'G-DW3507CZ82');
 
 <main id="main-content">
 
-    <div class="hero-bg">
+    <header class="hero-bg">
         <div class="px-6">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Our Services</h1>
-            <p class="max-w-4xl mx-auto text-2xl md:text-3xl font-medium leading-relaxed">
+            <h1>Our Services</h1>
+            <p>
                 Global sourcing and supply chain solutions tailored to your technical and commercial requirements.
             </p>
         </div>
-    </div>
+    </header>
 
     <div class="services">
 
@@ -279,7 +279,6 @@ gtag('config', 'G-DW3507CZ82');
 </footer>
 
 <script>
-    // 🎀 Mobile Menu Logic 🎀
     const menuBtn = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
     const menuLinks = mobileMenu.querySelectorAll("a");
@@ -295,18 +294,14 @@ gtag('config', 'G-DW3507CZ82');
         });
     });
 
-    // Close menu if clicking outside
     document.addEventListener("click", (e) => {
         if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
             mobileMenu.classList.add("hidden");
         }
     });
 
-    // Fade in main content after load
     window.addEventListener('load', () => {
         document.getElementById('main-content').style.opacity = 1;
-
-        // Animate each service box
         document.querySelectorAll('.service-box').forEach((el, i) => {
             setTimeout(() => el.classList.add('visible'), i * 150);
         });
