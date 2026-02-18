@@ -10,12 +10,16 @@
     <meta name="description"
           content="Learn about GSMB, a global sourcing and supply chain company founded by an industry veteran, connecting businesses with trusted manufacturers worldwide.">
 
+    <link rel="icon" type="image/png" href="/favicon.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
+
+        html { scroll-behavior: smooth; }
 
         .hero-bg {
             background: linear-gradient(rgba(0, 51, 102, 0.75), rgba(0, 51, 102, 0.75)),
@@ -50,33 +54,34 @@
 
 </head>
 
-<body class="bg-slate-50 font-sans text-slate-700">
+<body class="bg-slate-50 font-sans text-slate-700 text-base">
 
 
-<!-- Navigation -->
-
+<!-- NAV (SAME AS INDEX) -->
 <nav class="bg-white py-6 px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
 
-    <a href="/" class="transition-transform hover:scale-105">
-        <img src="logo.png" alt="GSMB Logo" class="h-16 md:h-24 w-auto">
-    </a>
+    <div class="flex items-center">
+        <a href="index.html" class="block transition-transform duration-300 hover:scale-105">
+            <img src="logo.png" alt="GSMB Logo" class="h-16 md:h-24 w-auto border-0">
+        </a>
+    </div>
 
     <div class="hidden md:flex space-x-10 font-semibold text-[#003366] text-lg">
 
-        <a href="/" class="hover:text-blue-600 transition">Home</a>
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
 
-        <a href="/about.html" class="text-blue-600">About</a>
+        <a href="about.html" class="hover:text-blue-600 transition text-blue-600">About</a>
 
-        <a href="/#services" class="hover:text-blue-600 transition">Services</a>
+        <a href="services.html" class="hover:text-blue-600 transition">Services</a>
 
-        <a href="/#contact" class="hover:text-blue-600 transition">Contact</a>
+        <a href="index.html#contact" class="hover:text-blue-600 transition">Contact</a>
 
     </div>
 
 </nav>
 
 
-<!-- Hero Section -->
+<!-- Hero -->
 
 <header class="hero-bg h-[420px] flex items-center justify-center text-center text-white px-6">
 
@@ -100,9 +105,7 @@
 <section class="max-w-6xl mx-auto py-20 px-6">
 
     <h2 class="section-line text-2xl font-bold mb-14 uppercase tracking-widest text-slate-400">
-
         Our Story
-
     </h2>
 
     <div class="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-slate-600 text-center">
@@ -129,18 +132,14 @@
 </section>
 
 
-<!-- Founder Section -->
+<!-- Founder -->
 
 <section class="bg-white border-t border-b border-slate-200 py-20">
 
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
 
-        <!-- Founder Image (Optional) -->
-
         <div class="flex justify-center">
-
-            <!-- Replace founder.jpg with your photo if you want -->
 
             <img src="founder.jpg"
                  alt="Founder of GSMB"
@@ -149,40 +148,29 @@
         </div>
 
 
-        <!-- Founder Text -->
-
         <div>
 
             <h3 class="text-3xl font-bold text-[#003366] mb-6">
-
                 Miki Benishay - Founder & CEO
-
             </h3>
 
             <p class="text-slate-600 leading-relaxed text-lg mb-4">
-
                 Founded and led by an experienced international sourcing professional,
                 GSMB is driven by deep industry knowledge and first-hand manufacturing expertise.
-
             </p>
 
             <p class="text-slate-600 leading-relaxed text-lg mb-4">
-
                 With years of direct involvement in factory operations, supplier negotiations,
                 quality management, and logistics coordination, the company’s leadership ensures
                 that every project meets the highest standards of performance and reliability.
-
             </p>
 
             <p class="text-slate-600 leading-relaxed text-lg">
-
                 This hands-on leadership approach enables GSMB to act as a true extension
                 of its clients’ procurement and operations teams.
-
             </p>
 
         </div>
-
 
     </div>
 
@@ -194,9 +182,7 @@
 <section class="max-w-6xl mx-auto py-20 px-6">
 
     <h2 class="section-line text-2xl font-bold mb-14 uppercase tracking-widest text-slate-400">
-
         Our Global Network
-
     </h2>
 
     <div class="max-w-4xl mx-auto text-center space-y-6 text-lg leading-relaxed text-slate-600">
@@ -233,16 +219,12 @@
         <div>
 
             <h3 class="text-2xl font-bold text-[#003366] mb-6">
-
                 Our Mission
-
             </h3>
 
             <p class="text-slate-600 leading-relaxed text-lg">
-
                 To simplify global sourcing and deliver transparent, reliable,
                 and cost-effective supply chain solutions that enable sustainable growth.
-
             </p>
 
         </div>
@@ -251,20 +233,15 @@
         <div>
 
             <h3 class="text-2xl font-bold text-[#003366] mb-6">
-
                 Our Vision
-
             </h3>
 
             <p class="text-slate-600 leading-relaxed text-lg">
-
                 To become a trusted global reference for ethical, relationship-driven,
                 and performance-focused manufacturing partnerships.
-
             </p>
 
         </div>
-
 
     </div>
 
@@ -276,9 +253,7 @@
 <section class="max-w-6xl mx-auto py-20 px-6">
 
     <h2 class="section-line text-2xl font-bold mb-14 uppercase tracking-widest text-slate-400">
-
         Why GSMB
-
     </h2>
 
     <div class="grid md:grid-cols-3 gap-10 text-center">
@@ -289,15 +264,11 @@
             <i class="fas fa-user-tie text-4xl text-[#004a99] mb-5"></i>
 
             <h4 class="font-bold text-lg text-[#003366] mb-3">
-
                 Experience-Led Leadership
-
             </h4>
 
             <p class="text-slate-600">
-
                 Founded and managed by a seasoned supply chain professional.
-
             </p>
 
         </div>
@@ -308,15 +279,11 @@
             <i class="fas fa-network-wired text-4xl text-[#004a99] mb-5"></i>
 
             <h4 class="font-bold text-lg text-[#003366] mb-3">
-
                 Trusted Global Partners
-
             </h4>
 
             <p class="text-slate-600">
-
                 Long-term relationships with vetted manufacturers worldwide.
-
             </p>
 
         </div>
@@ -327,76 +294,13 @@
             <i class="fas fa-shield-halved text-4xl text-[#004a99] mb-5"></i>
 
             <h4 class="font-bold text-lg text-[#003366] mb-3">
-
                 Risk & Quality Control
-
             </h4>
 
             <p class="text-slate-600">
-
                 Strong compliance, audit, and quality assurance processes.
-
             </p>
 
         </div>
 
-
     </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="bg-[#003366] text-white py-20">
-
-    <div class="max-w-4xl mx-auto text-center px-6">
-
-        <h2 class="text-3xl font-bold mb-6">
-
-            Let’s Build Your Supply Chain Together
-
-        </h2>
-
-        <p class="mb-10 text-lg opacity-90">
-
-            Partner with GSMB to build resilient, efficient, and scalable
-            global sourcing operations.
-
-        </p>
-
-        <a href="mailto:info@gsmb.net"
-           class="bg-white text-[#003366] font-bold py-4 px-12 rounded shadow hover:bg-slate-100 transition uppercase tracking-widest">
-
-            Contact Us
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- Footer -->
-
-<footer class="bg-[#003366] text-white py-10 px-12 flex flex-col md:flex-row justify-between items-center">
-
-    <p class="opacity-60">
-
-        &copy; 2026 GSMB. All rights reserved.
-
-    </p>
-
-    <a href="https://www.linkedin.com/company/global-solutions-mb/"
-       target="_blank"
-       class="text-3xl hover:text-blue-300 transition opacity-80">
-
-        <i class="fab fa-linkedin"></i>
-
-    </a>
-
-</footer>
-
-
-</body>
-</html>
