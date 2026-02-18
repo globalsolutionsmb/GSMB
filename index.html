@@ -84,19 +84,44 @@ html { scroll-behavior: smooth; }
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL523JQP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
-<nav class="bg-white py-6 px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
+<!-- Navigation -->
+<nav class="bg-white py-6 px-6 md:px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
     <div class="flex items-center">
         <a href="/" class="block transition-transform duration-300 hover:scale-105">
             <img src="logo.png" alt="GSMB Logo" class="h-16 md:h-24 w-auto border-0">
         </a>
     </div>
+
     <div class="hidden md:flex space-x-10 font-semibold text-[#003366] text-lg">
         <a href="about.html" class="hover:text-blue-600 transition">About</a>
         <a href="services.html" class="hover:text-blue-600 transition">Services</a>
         <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
     </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden flex items-center">
+        <button id="mobile-menu-button" class="text-[#003366] text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
 </nav>
 
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden bg-white shadow-md border-t border-slate-200 md:hidden absolute w-full z-40">
+    <a href="about.html" class="block px-6 py-4 border-b border-slate-200 hover:bg-slate-50">About</a>
+    <a href="services.html" class="block px-6 py-4 border-b border-slate-200 hover:bg-slate-50">Services</a>
+    <a href="#contact" class="block px-6 py-4 hover:bg-slate-50">Contact</a>
+</div>
+
+<script>
+const menuBtn = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+});
+</script>
+
+<!-- Hero -->
 <header class="hero-bg h-[600px] flex flex-col items-center justify-center text-center text-white px-4">
     <h1 class="text-4xl md:text-5xl font-bold mb-10 tracking-tight">GSMB — Connecting Companies to<br>Trusted Manufacturers Worldwide</h1>
     <p class="max-w-4xl text-xl md:text-2xl mb-14 opacity-100 leading-relaxed font-semibold tracking-wide">
@@ -108,6 +133,7 @@ html { scroll-behavior: smooth; }
     </a>
 </header>
 
+<!-- Services Section -->
 <section id="services" class="max-w-7xl mx-auto py-20 px-6">
     <h2 class="section-line text-2xl font-bold mb-10 uppercase tracking-widest text-slate-400">What We Do</h2>
     <p class="text-center max-w-4xl mx-auto mb-16 text-[#003366] text-xl font-medium leading-relaxed italic opacity-80">
@@ -133,6 +159,7 @@ html { scroll-behavior: smooth; }
     </div>
 </section>
 
+<!-- About / Global Footprint -->
 <section id="about" class="bg-white py-20 border-t border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-6">
         <h2 class="section-line text-2xl font-bold mb-4 uppercase tracking-widest text-slate-400">Our Global Footprint</h2>
@@ -155,6 +182,7 @@ html { scroll-behavior: smooth; }
     </div>
 </section>
 
+<!-- Clients -->
 <section class="max-w-6xl mx-auto py-20 px-6">
     <h2 class="section-line text-2xl font-bold mb-10 uppercase tracking-widest text-slate-400">Our Clients</h2>
     <p class="text-center mb-16 text-xl leading-relaxed text-slate-600">
@@ -180,6 +208,7 @@ html { scroll-behavior: smooth; }
     </div>
 </section>
 
+<!-- Contact -->
 <section id="contact" class="bg-white py-20 border-t border-slate-200">
     <div class="max-w-5xl mx-auto px-6">
         <h2 class="section-line text-2xl font-bold mb-16 uppercase tracking-widest text-slate-400">Get In Touch</h2>
@@ -205,6 +234,7 @@ html { scroll-behavior: smooth; }
     </div>
 </section>
 
+<!-- Footer -->
 <footer class="bg-[#003366] text-white py-10 px-12 flex flex-col md:flex-row justify-between items-center text-base">
     <p class="mb-4 md:mb-0 opacity-60">&copy; 2026 GSMB. All rights reserved.</p>
     <div class="flex items-center space-x-10">
