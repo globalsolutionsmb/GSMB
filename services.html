@@ -1,173 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | GSMB</title>
 
-    <!-- SEO -->
-    <meta name="description"
-          content="GSMB provides global sourcing, procurement, and supply chain solutions for industrial and OEM clients. With teams in China, India, Israel, Portugal, and Belgium, we connect companies to trusted manufacturers worldwide.">
-    <meta name="keywords"
-          content="global sourcing, supply chain management, OEM sourcing, industrial procurement, supplier qualification, manufacturing audits, international logistics, China sourcing, India sourcing, Europe sourcing, contract manufacturing, factory sourcing">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Social Media Preview -->
-    <meta property="og:title" content="GSMB | Global Sourcing & Supply Chain Solutions">
-    <meta property="og:description"
-          content="Trusted global sourcing and procurement partner for OEM and industrial companies. Teams in China, India, Israel, and Europe.">
-    <meta property="og:image" content="https://www.gsmb.net/social-preview.jpg">
-    <meta property="og:url" content="https://www.gsmb.net/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GSMB | Global Sourcing & Supply Chain Solutions">
-    <meta name="twitter:description"
-          content="Trusted global sourcing and procurement partner for OEM and industrial companies worldwide.">
-    <meta name="twitter:image" content="https://www.gsmb.net/social-preview.jpg">
+<title>Global Sourcing & OEM Procurement Services | GSMB</title>
 
-    <!-- Preload Hero Image to avoid jump -->
-    <link rel="preload" as="image"
-          href="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80">
+<link rel="icon" type="image/png" href="/favicon.png">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- SEO -->
+<meta name="description"
+      content="Global sourcing, OEM procurement, and supply chain services for industrial companies. Electrical cables, PCB, steel, and mechanical assemblies.">
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+<meta name="keywords"
+ content="global sourcing, OEM procurement, supply chain management, electrical cables, PCB manufacturing, steel sourcing, mechanical assemblies">
 
-        .hero-bg {
-            min-height: 600px;
-            background: linear-gradient(rgba(0, 51, 102, 0.65), rgba(0, 51, 102, 0.65)),
-            url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1s ease-in;
-        }
+<link rel="canonical" href="https://www.gsmb.net/services.html">
 
-        .hero-bg.loaded {
-            opacity: 1;
-        }
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DW3507CZ82"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-DW3507CZ82');
+</script>
 
-        .section-line {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: #003366;
-        }
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-        .section-line::before,
-        .section-line::after {
-            content: '';
-            flex: 1;
-            border-bottom: 1px solid #cbd5e1;
-        }
+<!-- Font Awesome -->
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        .section-line:not(:empty)::before {
-            margin-right: 1.5rem;
-        }
+<!-- Preload key images -->
+<link rel="preload" as="image" href="images/electrical-cables.jpg">
+<link rel="preload" as="image" href="images/pcb-pcba-class3.jpg">
+<link rel="preload" as="image" href="images/steel.jpg">
+<link rel="preload" as="image" href="images/mechanical-assemblies.jpg">
 
-        .section-line:not(:empty)::after {
-            margin-left: 1.5rem;
-        }
+<style>
 
-        .pin:hover::after {
-            content: attr(title);
-            position: absolute;
-            background: #003366;
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            white-space: nowrap;
-            z-index: 10;
-        }
-    </style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+/* Header */
+.header {
+    background: #003366;
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
+    min-height: 300px; /* Prevent jump */
+}
+
+.header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.header p {
+    font-size: 20px;
+    max-width: 900px;
+    margin: auto;
+    opacity: 0.9;
+}
+
+/* Services */
+.services {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.service-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 60px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.service-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-box h2 {
+    color: #003366;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.service-image {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.service-box p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* CTA */
+.gsmc-cta {
+    background: linear-gradient(135deg, #003366, #006699);
+    color: #fff;
+    text-align: center;
+    padding: 70px 20px;
+    min-height: 300px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 35px;
+    background-color: #ff6600;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+}
+
+</style>
+
 </head>
+
 <body class="bg-slate-50 font-sans text-slate-700 text-base">
 
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL523JQP" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
-</noscript>
+<!-- Shared Header -->
+<div id="site-header"></div>
 
-<!-- NAV -->
-<nav class="bg-white py-6 px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
-    <div class="flex items-center">
-        <a href="/" class="block transition-transform duration-300 hover:scale-105">
-            <img src="logo.png" alt="GSMB Logo" class="h-16 md:h-24 w-auto border-0">
-        </a>
-    </div>
-    <div class="hidden md:flex space-x-10 font-semibold text-[#003366] text-lg">
-        <a href="about.html" class="hover:text-blue-600 transition">About</a>
-        <a href="services.html" class="hover:text-blue-600 transition text-blue-600">Services</a>
-        <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-    </div>
-</nav>
+<main id="main-content">
 
-<!-- Hero -->
-<header class="hero-bg flex flex-col items-center justify-center text-center text-white px-4">
-    <h1 class="text-4xl md:text-5xl font-bold mb-10 tracking-tight">
-        GSMB — Connecting Companies to<br>Trusted Manufacturers Worldwide
-    </h1>
-    <p class="max-w-4xl text-xl md:text-2xl mb-14 opacity-100 leading-relaxed font-semibold tracking-wide">
-        We simplify sourcing, procurement, and global supply chain management<br class="hidden md:block">
-        with teams in China, India, Israel, Portugal, and Belgium.
-    </p>
-    <a href="mailto:info@gsmb.net"
-       class="bg-[#004a99] hover:bg-[#003366] text-white font-semibold py-4 px-12 rounded shadow-xl transition-all uppercase tracking-widest text-base border border-blue-400/30">
-        Contact Us Today
-    </a>
-</header>
+<!-- Header -->
+<div class="header">
 
-<!-- Services Section -->
-<section id="services" class="max-w-7xl mx-auto py-20 px-6">
-    <h2 class="section-line text-2xl font-bold mb-10 uppercase tracking-widest text-slate-400">What We Do</h2>
-    <p class="text-center max-w-4xl mx-auto mb-16 text-[#003366] text-xl font-medium leading-relaxed italic opacity-80">
-        "We provide end-to-end supply chain solutions, from identifying the right manufacturers to ensuring every product meets your quality standards before it leaves the factory."
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-        <div class="flex flex-col items-center bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-            <div class="text-[#004a99] text-5xl mb-6 opacity-80"><i class="fas fa-magnifying-glass-location"></i></div>
-            <h3 class="font-bold text-[#003366] text-lg leading-snug tracking-tight">Supplier Sourcing<br>& Qualification</h3>
-        </div>
-        <div class="flex flex-col items-center bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-            <div class="text-[#004a99] text-5xl mb-6 opacity-80"><i class="fas fa-chart-line"></i></div>
-            <h3 class="font-bold text-[#003366] text-lg leading-snug tracking-tight">Procurement &<br>Cost Benchmarking</h3>
-        </div>
-        <div class="flex flex-col items-center bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-            <div class="text-[#004a99] text-5xl mb-6 opacity-80"><i class="fas fa-file-shield"></i></div>
-            <h3 class="font-bold text-[#003366] text-lg leading-snug tracking-tight">Manufacturing<br>Audits & Compliance</h3>
-        </div>
-        <div class="flex flex-col items-center bg-white p-8 rounded-xl shadow-sm border border-slate-100">
-            <div class="text-[#004a99] text-5xl mb-6 opacity-80"><i class="fas fa-ship"></i></div>
-            <h3 class="font-bold text-[#003366] text-lg leading-snug tracking-tight">International Supply<br>Chain Support</h3>
-        </div>
-    </div>
+<h1>Our Services</h1>
+
+<p>
+Global sourcing and supply chain solutions tailored to your technical and commercial requirements.
+</p>
+
+</div>
+
+<!-- Services -->
+<div class="services">
+
+<!-- Electrical -->
+<div class="service-box">
+<h2>Electrical Cables</h2>
+<div class="service-image">
+<img src="images/electrical-cables.jpg"
+ alt="Electrical cables"
+ loading="lazy">
+</div>
+<p>
+GSMB specializes in sourcing low, medium, and high-voltage electrical cables,
+including copper conductor cables and solar PV cables for industrial,
+infrastructure, and renewable energy projects.
+</p>
+</div>
+
+<!-- PCB -->
+<div class="service-box">
+<h2>PCB & PCBA (IPC Class 3)</h2>
+<div class="service-image">
+<img src="images/pcb-pcba-class3.jpg"
+ alt="PCB manufacturing"
+ loading="lazy">
+</div>
+<p>
+We provide full-service sourcing for printed circuit boards and electronic
+assemblies including SMT, THT, and full traceability.
+</p>
+</div>
+
+<!-- Steel -->
+<div class="service-box">
+<h2>Construction Steel & Solar Mounting</h2>
+<div class="service-image">
+<img src="images/steel.jpg"
+ alt="Steel structures"
+ loading="lazy">
+</div>
+<p>
+Structural steel for solar, infrastructure, and construction projects.
+</p>
+</div>
+
+<!-- Mechanical -->
+<div class="service-box">
+<h2>Industrial Mechanical Assemblies</h2>
+<div class="service-image">
+<img src="images/mechanical-assemblies.jpg"
+ alt="Mechanical assemblies"
+ loading="lazy">
+</div>
+<p>
+Welded structures, machined components, and integrated assemblies
+for OEM clients.
+</p>
+</div>
+
+<!-- Global -->
+<div class="service-box">
+<h2>Worldwide Coverage & Strategic Sourcing</h2>
+<p>
+Global operations across North America, Europe, LATAM,
+Middle East, and Asia with controlled risk and transparency.
+</p>
+</div>
+
+</div>
+
+<!-- CTA -->
+<section class="gsmc-cta">
+<h2 class="text-4xl md:text-5xl font-bold mb-6">
+Let’s Optimize Your Procurement
+</h2>
+<p class="text-lg md:text-xl mb-4">
+If GSMB cannot offer better value than your current setup,
+it simply means your procurement is already excellent.
+</p>
+<p class="text-xl md:text-2xl font-bold mb-6">
+But most of the time — WE CAN.
+</p>
+<a href="mailto:info@gsmb.net" class="cta-button">
+Contact Us
+</a>
 </section>
 
-<!-- Include Footer -->
-<footer class="bg-[#003366] text-white py-10 px-12 flex flex-col md:flex-row justify-between items-center text-base">
-    <p class="mb-4 md:mb-0 opacity-60">&copy; 2026 GSMB. All rights reserved.</p>
-    <div class="flex items-center space-x-10">
-        <span class="opacity-40 font-semibold uppercase tracking-[0.3em] text-xs">Connecting Global Excellence</span>
-        <a href="https://www.linkedin.com/company/global-solutions-mb/" target="_blank"
-           class="text-4xl hover:text-blue-300 transition-colors opacity-80">
-            <i class="fab fa-linkedin"></i>
-        </a>
-    </div>
-</footer>
+</main>
+
+<!-- Shared Footer -->
+<div id="site-footer"></div>
 
 <script>
-    // Fade in hero after page load
-    window.addEventListener('load', () => {
-        document.querySelector('.hero-bg').classList.add('loaded');
+async function loadPart(id, file) {
+    const res = await fetch(file);
+    const data = await res.text();
+    document.getElementById(id).innerHTML = data;
+}
+
+// Load shared header and footer
+loadPart("site-header", "header.html");
+loadPart("site-footer", "footer.html");
+
+// Fade in main content after load
+window.addEventListener('load', () => {
+    document.getElementById('main-content').style.opacity = 1;
+
+    // Animate each service box
+    document.querySelectorAll('.service-box').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 200);
     });
+});
 </script>
 
 </body>
