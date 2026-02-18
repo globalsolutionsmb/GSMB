@@ -43,7 +43,7 @@
             url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            height: 420px; /* Matched to About page height */
+            height: 420px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -52,7 +52,7 @@
             width: 100%;
         }
 
-        /* 🌍 Global Network Intro 🌍 */
+        /* 🌍 Global Network Intro */
         .network-intro {
             background: white;
             padding: 70px 24px;
@@ -98,7 +98,6 @@
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
         }
 
-        /* 👁️ BOOSTED VISIBILITY TEXT 👁️ */
         .service-box p {
             font-size: 20px; 
             line-height: 1.8;
@@ -149,17 +148,19 @@
     </div>
 
     <div class="md:hidden flex items-center">
-        <button id="mobile-menu-button" class="text-[#003366] text-2xl focus:outline-none">
+        <button id="mobile-menu-button" class="text-[#003366] text-3xl focus:outline-none">
             <i class="fas fa-bars"></i>
         </button>
     </div>
 </nav>
 
-<div id="mobile-menu" class="hidden bg-white shadow-md border-t border-slate-200 md:hidden absolute w-full z-40">
-    <a href="index.html" class="block px-6 py-4 border-b border-slate-200 hover:bg-slate-50">Home</a>
-    <a href="about.html" class="block px-6 py-4 border-b border-slate-200 hover:bg-slate-50">About</a>
-    <a href="services.html" class="block px-6 py-4 border-b border-slate-200 bg-slate-50 text-blue-600 font-bold">Services</a>
-    <a href="index.html#contact" class="block px-6 py-4 hover:bg-slate-50">Contact</a>
+<div id="mobile-menu" class="hidden bg-white shadow-xl border-t border-slate-100 md:hidden absolute w-full z-40 left-0 top-[112px]">
+    <div class="flex flex-col font-bold text-[#003366]">
+        <a href="index.html" class="px-8 py-5 border-b border-slate-50 hover:bg-slate-50">Home</a>
+        <a href="about.html" class="px-8 py-5 border-b border-slate-50 hover:bg-slate-50">About</a>
+        <a href="services.html" class="px-8 py-5 border-b border-slate-50 bg-slate-50 text-blue-600">Services</a>
+        <a href="index.html#contact" class="px-8 py-5 hover:bg-slate-50">Contact</a>
+    </div>
 </div>
 
 <main id="main-content">
@@ -167,7 +168,7 @@
     <header class="hero-bg px-6">
         <div>
             <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p class="max-w-3xl mx-auto text-2xl opacity-95 leading-relaxed">
+            <p class="max-w-3xl mx-auto text-xl opacity-95 leading-relaxed">
                 Global sourcing and supply chain solutions tailored to your technical and commercial requirements.
             </p>
         </div>
@@ -259,13 +260,27 @@
         });
     });
 
+    // ✨ FIXED Mobile Menu Logic ✨
     const menuBtn = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
-    menuBtn.addEventListener("click", () => {
+    
+    menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
         mobileMenu.classList.toggle("hidden");
     });
+
+    // Close menu when clicking a link
     mobileMenu.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+        link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+            mobileMenu.classList.add("hidden");
+        }
     });
 </script>
 
