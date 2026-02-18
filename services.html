@@ -170,11 +170,13 @@ main {
     </div>
 </nav>
 
-<div id="mobile-menu" class="hidden bg-white shadow-md border-t border-slate-200 md:hidden absolute w-full z-40">
-    <a href="index.html" class="block px-6 py-4 border-b border-slate-200 hover:bg-slate-50">Home</a>
-    <a href="about.html" class="block px-6 py-4 border-b border-slate-200 hover:bg-slate-50">About</a>
-    <a href="services.html" class="block px-6 py-4 border-b border-slate-200 bg-slate-50 text-blue-600 font-bold">Services</a>
-    <a href="index.html#contact" class="block px-6 py-4 hover:bg-slate-50">Contact</a>
+<div id="mobile-menu" class="hidden bg-white shadow-xl border-t border-slate-200 md:hidden absolute w-full z-40 left-0">
+    <div class="flex flex-col font-semibold text-[#003366]">
+        <a href="index.html" class="px-6 py-5 border-b border-slate-100 hover:bg-slate-50">Home</a>
+        <a href="about.html" class="px-6 py-5 border-b border-slate-100 hover:bg-slate-50">About</a>
+        <a href="services.html" class="px-6 py-5 border-b border-slate-100 bg-slate-50 text-blue-600">Services</a>
+        <a href="index.html#contact" class="px-6 py-5 hover:bg-slate-50">Contact</a>
+    </div>
 </div>
 
 <main id="main-content">
@@ -276,14 +278,23 @@ const menuBtn = document.getElementById("mobile-menu-button");
 const mobileMenu = document.getElementById("mobile-menu");
 const menuLinks = mobileMenu.querySelectorAll("a");
 
-menuBtn.addEventListener("click", () => {
+menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
     mobileMenu.classList.toggle("hidden");
 });
 
+// Close menu when clicking a link
 menuLinks.forEach(link => {
     link.addEventListener("click", () => {
         mobileMenu.classList.add("hidden");
     });
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        mobileMenu.classList.add("hidden");
+    }
 });
 
 // Fade in main content after load
@@ -299,6 +310,7 @@ window.addEventListener('load', () => {
 
 </body>
 </html>
+
 
 
 
