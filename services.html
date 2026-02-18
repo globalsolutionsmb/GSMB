@@ -259,24 +259,6 @@ async function loadPart(id, file) {
     const res = await fetch(file + "?v=" + Date.now());
     const data = await res.text();
     document.getElementById(id).innerHTML = data;
-}
-
-loadPart("site-header", "header.html");
-loadPart("site-footer", "footer.html");
-
-// Fade in main content after load
-window.addEventListener('load', () => {
-    document.getElementById('main-content').style.opacity = 1;
-
-    // Animate each service box
-    document.querySelectorAll('.service-box').forEach((el, i) => {
-        setTimeout(() => el.classList.add('visible'), i * 200);
-    });
-});
-      async function loadPart(id, file) {
-    const res = await fetch(file + "?v=" + Date.now());
-    const data = await res.text();
-    document.getElementById(id).innerHTML = data;
 
     // After header loads, activate mobile menu
     if (id === "site-header") {
@@ -291,11 +273,24 @@ window.addEventListener('load', () => {
     }
 }
 
+// Load header and footer
+loadPart("site-header", "header.html");
+loadPart("site-footer", "footer.html");
+
+// Fade in main content after load
+window.addEventListener('load', () => {
+    document.getElementById('main-content').style.opacity = 1;
+
+    document.querySelectorAll('.service-box').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 200);
+    });
+});
 </script>
 
 
 </body>
 </html>
+
 
 
 
