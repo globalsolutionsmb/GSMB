@@ -9,14 +9,12 @@
 
 <link rel="icon" type="image/png" href="/favicon.png">
 
-<!-- SEO -->
 <meta name="description"
       content="Global sourcing, OEM procurement, and supply chain services for industrial companies. Electrical cables, PCB, steel, and mechanical assemblies.">
 <meta name="keywords"
- content="global sourcing, OEM procurement, supply chain management, electrical cables, PCB manufacturing, steel sourcing, mechanical assemblies">
+      content="global sourcing, OEM procurement, supply chain management, electrical cables, PCB manufacturing, steel sourcing, mechanical assemblies">
 <link rel="canonical" href="https://www.gsmb.net/services.html">
 
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DW3507CZ82"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -25,271 +23,248 @@ gtag('js', new Date());
 gtag('config', 'G-DW3507CZ82');
 </script>
 
-<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Font Awesome -->
 <link rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- Preload key images -->
-<link rel="preload" as="image" href="images/electrical-cables.jpg">
-<link rel="preload" as="image" href="images/pcb-pcba-class3.jpg">
-<link rel="preload" as="image" href="images/steel.jpg">
-<link rel="preload" as="image" href="images/mechanical-assemblies.jpg">
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f8fafc;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    html { scroll-behavior: smooth; }
+    
+    body {
+        margin: 0;
+        background: #f8fafc;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-main {
-    flex: 1;
-    opacity: 0;
-    transition: opacity 1s ease-in;
-}
+    main {
+        flex: 1;
+        opacity: 0;
+        transition: opacity 0.5s ease-in; /* Faster fade-in */
+    }
 
-/* Header */
-.header {
-    background: #003366;
-    color: white;
-    padding: 90px 20px;
-    text-align: center;
-    min-height: 300px;
-}
+    /* Header */
+    .header {
+        background: #003366;
+        color: white;
+        padding: 90px 20px;
+        text-align: center;
+    }
 
-.header h1 {
-    font-size: 52px;
-    margin-bottom: 18px;
-    letter-spacing: 0.5px;
-}
+    .header h1 {
+        font-size: 42px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
 
-.header p {
-    font-size: 24px;
-    max-width: 900px;
-    margin: auto;
-    opacity: 0.95;
-    line-height: 1.6;
-}
+    .header p {
+        font-size: 20px;
+        max-width: 900px;
+        margin: auto;
+        opacity: 0.9;
+    }
 
-/* Services */
-.services {
-    max-width: 1200px;
-    margin: auto;
-    padding: 80px 20px;
-}
+    /* Services */
+    .services {
+        max-width: 1200px;
+        margin: auto;
+        padding: 80px 20px;
+    }
 
-.service-box {
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    margin-bottom: 60px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-out;
-}
+    .service-box {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        margin-bottom: 60px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease-out;
+    }
 
-.service-box.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+    .service-box.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-.service-box h2 {
-    color: #003366;
-    font-size: 26px;
-    margin-bottom: 20px;
-}
+    .service-box h2 {
+        color: #003366;
+        font-size: 26px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
 
-.service-image {
-    max-width: 900px;
-    margin: 0 auto 30px;
-    text-align: center;
-}
+    .service-image {
+        max-width: 900px;
+        margin: 0 auto 30px;
+        text-align: center;
+    }
 
-.service-image img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
+    .service-image img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
 
-.service-box p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: #444;
-}
+    /* CTA */
+    .gsmc-cta {
+        background: linear-gradient(135deg, #003366, #006699);
+        color: #fff;
+        text-align: center;
+        padding: 70px 20px;
+    }
 
-/* CTA */
-.gsmc-cta {
-    background: linear-gradient(135deg, #003366, #006699);
-    color: #fff;
-    text-align: center;
-    padding: 70px 20px;
-    min-height: 300px;
-}
+    .cta-button {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 15px 35px;
+        background-color: #ff6600;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 15px 35px;
-    background-color: #ff6600;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #e65c00;
-    transform: scale(1.05);
-}
+    .cta-button:hover {
+        background-color: #e65c00;
+        transform: scale(1.05);
+    }
 </style>
 
 </head>
 
 <body class="bg-slate-50 font-sans text-slate-700 text-base">
 
-<!-- Shared Header -->
-<div id="site-header"></div>
+<nav class="bg-white py-6 px-6 md:px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
+    <div class="flex items-center">
+        <a href="index.html" class="block transition-transform duration-300 hover:scale-105">
+            <img src="logo.png" alt="GSMB Logo" class="h-16 md:h-24 w-auto border-0">
+        </a>
+    </div>
+
+    <div class="hidden md:flex space-x-10 font-semibold text-[#003366] text-lg">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="about.html" class="hover:text-blue-600 transition">About</a>
+        <a href="services.html" class="hover:text-blue-600 transition text-blue-600">Services</a>
+        <a href="index.html#contact" class="hover:text-blue-600 transition">Contact</a>
+    </div>
+
+    <div class="md:hidden flex items-center">
+        <button id="mobile-menu-button" class="text-[#003366] text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<div id="mobile-menu" class="hidden bg-white shadow-md border-t border-slate-200 md:hidden absolute w-full z-40">
+    <a href="index.html" class="block px-6 py-4 border-b border-slate-200 hover:bg-slate-50">Home</a>
+    <a href="about.html" class="block px-6 py-4 border-b border-slate-200 hover:bg-slate-50">About</a>
+    <a href="services.html" class="block px-6 py-4 border-b border-slate-200 bg-slate-50 text-blue-600 font-bold">Services</a>
+    <a href="index.html#contact" class="block px-6 py-4 hover:bg-slate-50">Contact</a>
+</div>
 
 <main id="main-content">
 
-<!-- Header -->
-<div class="header">
-<h1>Our Services</h1>
-<p>
-Global sourcing and supply chain solutions tailored to your technical and commercial requirements.
-</p>
-</div>
+    <div class="header">
+        <h1>Our Services</h1>
+        <p>Global sourcing and supply chain solutions tailored to your technical and commercial requirements.</p>
+    </div>
 
-<!-- Services -->
-<div class="services">
+    <div class="services">
 
-<!-- Electrical -->
-<div class="service-box">
-<h2>Electrical Cables</h2>
-<div class="service-image">
-<img src="images/electrical-cables.jpg" alt="Electrical cables" loading="lazy">
-</div>
-<p>
-GSMB specializes in sourcing low, medium, and high-voltage electrical cables,
-including copper conductor cables and solar PV cables for industrial,
-infrastructure, and renewable energy projects.
-</p>
-</div>
+        <div class="service-box">
+            <h2>Electrical Cables</h2>
+            <div class="service-image">
+                <img src="images/electrical-cables.jpg" alt="Electrical cables" loading="lazy">
+            </div>
+            <p>GSMB specializes in sourcing low, medium, and high-voltage electrical cables, including copper conductor cables and solar PV cables for industrial, infrastructure, and renewable energy projects.</p>
+        </div>
 
-<!-- PCB -->
-<div class="service-box">
-<h2>PCB & PCBA (IPC Class 3)</h2>
-<div class="service-image">
-<img src="images/pcb-pcba-class3.jpg" alt="PCB manufacturing" loading="lazy">
-</div>
-<p>
-We provide full-service sourcing for printed circuit boards and electronic
-assemblies including SMT, THT, and full traceability.
-</p>
-</div>
+        <div class="service-box">
+            <h2>PCB & PCBA (IPC Class 3)</h2>
+            <div class="service-image">
+                <img src="images/pcb-pcba-class3.jpg" alt="PCB manufacturing" loading="lazy">
+            </div>
+            <p>We provide full-service sourcing for printed circuit boards and electronic assemblies including SMT, THT, and full traceability.</p>
+        </div>
 
-<!-- Steel -->
-<div class="service-box">
-<h2>Construction Steel & Solar Mounting</h2>
-<div class="service-image">
-<img src="images/steel.jpg" alt="Steel structures" loading="lazy">
-</div>
-<p>
-Structural steel for solar, infrastructure, and construction projects.
-</p>
-</div>
+        <div class="service-box">
+            <h2>Construction Steel & Solar Mounting</h2>
+            <div class="service-image">
+                <img src="images/steel.jpg" alt="Steel structures" loading="lazy">
+            </div>
+            <p>Structural steel for solar, infrastructure, and construction projects.</p>
+        </div>
 
-<!-- Mechanical -->
-<div class="service-box">
-<h2>Industrial Mechanical Assemblies</h2>
-<div class="service-image">
-<img src="images/mechanical-assemblies.jpg" alt="Mechanical assemblies" loading="lazy">
-</div>
-<p>
-Welded structures, machined components, and integrated assemblies
-for OEM clients.
-</p>
-</div>
+        <div class="service-box">
+            <h2>Industrial Mechanical Assemblies</h2>
+            <div class="service-image">
+                <img src="images/mechanical-assemblies.jpg" alt="Mechanical assemblies" loading="lazy">
+            </div>
+            <p>Welded structures, machined components, and integrated assemblies for OEM clients.</p>
+        </div>
 
-<!-- Global -->
-<div class="service-box">
-<h2>Worldwide Coverage & Strategic Sourcing</h2>
-<p>
-Global operations across North America, Europe, LATAM,
-Middle East, and Asia with controlled risk and transparency.
-</p>
-</div>
+        <div class="service-box">
+            <h2>Worldwide Coverage & Strategic Sourcing</h2>
+            <p>Global operations across North America, Europe, LATAM, Middle East, and Asia with controlled risk and transparency.</p>
+        </div>
 
-</div>
+    </div>
 
-<!-- CTA -->
-<section class="gsmc-cta">
-<h2 class="text-4xl md:text-5xl font-bold mb-6">
-Let’s Optimize Your Procurement
-</h2>
-<p class="text-lg md:text-xl mb-4">
-If GSMB cannot offer better value than your current setup,
-it simply means your procurement is already excellent.
-</p>
-<p class="text-xl md:text-2xl font-bold mb-6">
-But most of the time — WE CAN.
-</p>
-<a href="mailto:info@gsmb.net" class="cta-button">
-Contact Us
-</a>
-</section>
+    <section class="gsmc-cta">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Let’s Optimize Your Procurement</h2>
+        <p class="text-lg md:text-xl mb-4">If GSMB cannot offer better value than your current setup, it simply means your procurement is already excellent.</p>
+        <p class="text-xl md:text-2xl font-bold mb-6">But most of the time — WE CAN.</p>
+        <a href="mailto:info@gsmb.net" class="cta-button">Contact Us</a>
+    </section>
 
 </main>
 
-<!-- Shared Footer -->
-<div id="site-footer"></div>
+<footer class="bg-[#003366] text-white py-10 px-12 flex flex-col md:flex-row justify-between items-center text-base">
+    <p class="mb-4 md:mb-0 opacity-60">&copy; 2026 GSMB. All rights reserved.</p>
+    <div class="flex items-center space-x-10">
+        <span class="opacity-40 font-semibold uppercase tracking-[0.3em] text-xs">Connecting Global Excellence</span>
+        <a href="https://www.linkedin.com/company/global-solutions-mb/" target="_blank" class="text-4xl hover:text-blue-300 transition-colors opacity-80">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+</footer>
 
 <script>
-// Load shared header and footer (no cache)
-async function loadPart(id, file) {
-    const res = await fetch(file + "?v=" + Date.now());
-    const data = await res.text();
-    document.getElementById(id).innerHTML = data;
+    // 🎀 Mobile Menu Logic 🎀
+    const menuBtn = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuLinks = mobileMenu.querySelectorAll("a");
 
-    // After header loads, activate mobile menu
-    if (id === "site-header") {
-        const btn = document.getElementById("menu-btn");
-        const menu = document.getElementById("mobile-menu");
-
-        if (btn && menu) {
-            btn.addEventListener("click", () => {
-                menu.classList.toggle("hidden");
-            });
-        }
-    }
-}
-
-// Load header and footer
-loadPart("site-header", "header.html");
-loadPart("site-footer", "footer.html");
-
-// Fade in main content after load
-window.addEventListener('load', () => {
-    document.getElementById('main-content').style.opacity = 1;
-
-    document.querySelectorAll('.service-box').forEach((el, i) => {
-        setTimeout(() => el.classList.add('visible'), i * 200);
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
     });
-});
-</script>
 
+    menuLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+        });
+    });
+
+    // Animate content on load
+    window.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('main-content').style.opacity = 1;
+        
+        // Quick observer for service box animation
+        const boxes = document.querySelectorAll('.service-box');
+        boxes.forEach((el, i) => {
+            setTimeout(() => el.classList.add('visible'), i * 150);
+        });
+    });
+</script>
 
 </body>
 </html>
+
 
 
 
