@@ -12,10 +12,8 @@
 <!-- SEO -->
 <meta name="description"
       content="Global sourcing, OEM procurement, and supply chain services for industrial companies. Electrical cables, PCB, steel, and mechanical assemblies.">
-
 <meta name="keywords"
  content="global sourcing, OEM procurement, supply chain management, electrical cables, PCB manufacturing, steel sourcing, mechanical assemblies">
-
 <link rel="canonical" href="https://www.gsmb.net/services.html">
 
 <!-- Google Analytics -->
@@ -41,7 +39,6 @@ gtag('config', 'G-DW3507CZ82');
 <link rel="preload" as="image" href="images/mechanical-assemblies.jpg">
 
 <style>
-
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -64,7 +61,7 @@ main {
     color: white;
     padding: 90px 20px;
     text-align: center;
-    min-height: 300px; /* Prevent jump */
+    min-height: 300px;
 }
 
 .header h1 {
@@ -151,7 +148,6 @@ main {
     background-color: #e65c00;
     transform: scale(1.05);
 }
-
 </style>
 
 </head>
@@ -165,13 +161,10 @@ main {
 
 <!-- Header -->
 <div class="header">
-
 <h1>Our Services</h1>
-
 <p>
 Global sourcing and supply chain solutions tailored to your technical and commercial requirements.
 </p>
-
 </div>
 
 <!-- Services -->
@@ -181,9 +174,7 @@ Global sourcing and supply chain solutions tailored to your technical and commer
 <div class="service-box">
 <h2>Electrical Cables</h2>
 <div class="service-image">
-<img src="images/electrical-cables.jpg"
- alt="Electrical cables"
- loading="lazy">
+<img src="images/electrical-cables.jpg" alt="Electrical cables" loading="lazy">
 </div>
 <p>
 GSMB specializes in sourcing low, medium, and high-voltage electrical cables,
@@ -196,9 +187,7 @@ infrastructure, and renewable energy projects.
 <div class="service-box">
 <h2>PCB & PCBA (IPC Class 3)</h2>
 <div class="service-image">
-<img src="images/pcb-pcba-class3.jpg"
- alt="PCB manufacturing"
- loading="lazy">
+<img src="images/pcb-pcba-class3.jpg" alt="PCB manufacturing" loading="lazy">
 </div>
 <p>
 We provide full-service sourcing for printed circuit boards and electronic
@@ -210,9 +199,7 @@ assemblies including SMT, THT, and full traceability.
 <div class="service-box">
 <h2>Construction Steel & Solar Mounting</h2>
 <div class="service-image">
-<img src="images/steel.jpg"
- alt="Steel structures"
- loading="lazy">
+<img src="images/steel.jpg" alt="Steel structures" loading="lazy">
 </div>
 <p>
 Structural steel for solar, infrastructure, and construction projects.
@@ -223,9 +210,7 @@ Structural steel for solar, infrastructure, and construction projects.
 <div class="service-box">
 <h2>Industrial Mechanical Assemblies</h2>
 <div class="service-image">
-<img src="images/mechanical-assemblies.jpg"
- alt="Mechanical assemblies"
- loading="lazy">
+<img src="images/mechanical-assemblies.jpg" alt="Mechanical assemblies" loading="lazy">
 </div>
 <p>
 Welded structures, machined components, and integrated assemblies
@@ -267,13 +252,12 @@ Contact Us
 <div id="site-footer"></div>
 
 <script>
+// Load shared header and footer
 async function loadPart(id, file) {
     const res = await fetch(file);
     const data = await res.text();
     document.getElementById(id).innerHTML = data;
 }
-
-// Load shared header and footer
 loadPart("site-header", "header.html");
 loadPart("site-footer", "footer.html");
 
