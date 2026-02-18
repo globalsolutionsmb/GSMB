@@ -98,13 +98,12 @@ html { scroll-behavior: smooth; }
         <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
     </div>
 
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden flex items-center">
-        <button id="mobile-menu-button" class="text-[#003366] text-2xl focus:outline-none">
-            <i class="fas fa-bars"></i>
-        </button>
-    </div>
-</nav>
+<!-- Mobile Menu Button -->
+<div class="md:hidden flex items-center">
+    <button id="mobile-menu-button" class="text-[#003366] text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
 
 <!-- Mobile Menu -->
 <div id="mobile-menu" class="hidden bg-white shadow-md border-t border-slate-200 md:hidden absolute w-full z-40">
@@ -116,10 +115,21 @@ html { scroll-behavior: smooth; }
 <script>
 const menuBtn = document.getElementById("mobile-menu-button");
 const mobileMenu = document.getElementById("mobile-menu");
+
+// Toggle menu on hamburger click
 menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
 });
+
+// --- NEW FIX ---
+// Close mobile menu when clicking any link inside it
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});
 </script>
+
 
 <!-- Hero -->
 <header class="hero-bg h-[600px] flex flex-col items-center justify-center text-center text-white px-4">
@@ -286,3 +296,4 @@ if (contactForm) {
 
 </body>
 </html>
+
