@@ -12,7 +12,7 @@
 <meta name="description"
       content="Global sourcing, OEM procurement, and supply chain services for industrial companies. Electrical cables, PCB, steel, and mechanical assemblies.">
 <meta name="keywords"
- content="global sourcing, OEM procurement, supply chain management, electrical cables, PCB manufacturing, steel sourcing, mechanical assemblies">
+      content="global sourcing, OEM procurement, supply chain management, electrical cables, PCB manufacturing, steel sourcing, mechanical assemblies">
 <link rel="canonical" href="https://www.gsmb.net/services.html">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DW3507CZ82"></script>
@@ -26,140 +26,144 @@ gtag('config', 'G-DW3507CZ82');
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<link rel="preload" as="image" href="images/electrical-cables.jpg">
-<link rel="preload" as="image" href="images/pcb-pcba-class3.jpg">
-<link rel="preload" as="image" href="images/steel.jpg">
-<link rel="preload" as="image" href="images/mechanical-assemblies.jpg">
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f8fafc;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    html { scroll-behavior: smooth; }
+    
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f8fafc;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 
-main {
-    flex: 1;
-    opacity: 0;
-    transition: opacity 1s ease-in;
-}
+    main {
+        flex: 1;
+        opacity: 0;
+        transition: opacity 0.8s ease-in;
+    }
 
-/* Header */
-.header {
-    background: #003366;
-    color: white;
-    padding: 90px 20px;
-    text-align: center;
-    min-height: 300px;
-}
+    /* Fixed Blue Banner Style to match Index/About */
+    .hero-bg {
+        background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85));
+        color: white;
+        padding: 100px 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 420px;
+    }
 
-.header h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
+    .hero-bg h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
 
-.header p {
-    font-size: 20px;
-    max-width: 900px;
-    margin: auto;
-    opacity: 0.9;
-}
+    .hero-bg p {
+        font-size: 24px; /* Matches the About page font size we increased! */
+        max-width: 900px;
+        margin: auto;
+        opacity: 0.95;
+        line-height: 1.6;
+    }
 
-/* Services */
-.services {
-    max-width: 1200px;
-    margin: auto;
-    padding: 80px 20px;
-}
+    /* Services Section */
+    .services {
+        max-width: 1200px;
+        margin: auto;
+        padding: 80px 20px;
+    }
 
-.service-box {
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    margin-bottom: 60px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-out;
-}
+    .service-box {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        margin-bottom: 60px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+    }
 
-.service-box.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+    .service-box.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-.service-box h2 {
-    color: #003366;
-    font-size: 26px;
-    margin-bottom: 20px;
-}
+    .service-box h2 {
+        color: #003366;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
 
-.service-image {
-    max-width: 900px;
-    margin: 0 auto 30px;
-    text-align: center;
-}
+    .service-image {
+        max-width: 900px;
+        margin: 0 auto 30px;
+        text-align: center;
+    }
 
-.service-image img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
+    .service-image img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
 
-.service-box p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: #444;
-}
+    .service-box p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #444;
+    }
 
-/* CTA */
-.gsmc-cta {
-    background: linear-gradient(135deg, #003366, #006699);
-    color: #fff;
-    text-align: center;
-    padding: 70px 20px;
-    min-height: 300px;
-}
+    /* CTA Section */
+    .gsmc-cta {
+        background: linear-gradient(135deg, #003366, #006699);
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+    }
 
-.cta-button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 15px 35px;
-    background-color: #ff6600;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
+    .cta-button {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 16px 40px;
+        background-color: #ff6600;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 
-.cta-button:hover {
-    background-color: #e65c00;
-    transform: scale(1.05);
-}
+    .cta-button:hover {
+        background-color: #e65c00;
+        transform: scale(1.05);
+    }
 </style>
 
 </head>
 
 <body class="bg-slate-50 font-sans text-slate-700 text-base">
 
-<nav class="bg-white py-6 px-6 md:px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
+<nav class="bg-white py-4 px-6 md:px-12 flex justify-between items-center shadow-sm sticky top-0 z-50">
     <div class="flex items-center">
         <a href="index.html" class="block transition-transform duration-300 hover:scale-105">
-            <img src="logo.png" alt="GSMB Logo" class="h-16 md:h-24 w-auto border-0">
+            <img src="logo.png" alt="GSMB Logo" class="h-20 md:h-28 w-auto border-0 object-contain">
         </a>
     </div>
 
     <div class="hidden md:flex space-x-10 font-semibold text-[#003366] text-lg">
         <a href="index.html" class="hover:text-blue-600 transition">Home</a>
         <a href="about.html" class="hover:text-blue-600 transition">About</a>
-        <a href="services.html" class="hover:text-blue-600 transition text-blue-600">Services</a>
+        <a href="services.html" class="text-blue-600 transition">Services</a>
         <a href="index.html#contact" class="hover:text-blue-600 transition">Contact</a>
     </div>
 
@@ -170,95 +174,97 @@ main {
     </div>
 </nav>
 
-<div id="mobile-menu" class="hidden bg-white shadow-2xl border-b border-slate-200 md:hidden absolute w-full z-40 left-0 top-[112px]">
+<div id="mobile-menu" class="hidden bg-white shadow-2xl border-b border-slate-200 md:hidden absolute w-full z-40 left-0 top-[100px]">
     <div class="flex flex-col font-bold text-[#003366] bg-white">
         <a href="index.html" class="px-8 py-6 border-b border-slate-100 block">Home</a>
         <a href="about.html" class="px-8 py-6 border-b border-slate-100 block">About</a>
-        <a href="services.html" class="px-8 py-6 border-b border-slate-100 block text-blue-600 bg-slate-50">Services</a>
+        <a href="services.html" class="px-8 py-6 border-b border-slate-100 block bg-slate-50 text-blue-600">Services</a>
         <a href="index.html#contact" class="px-8 py-6 block">Contact</a>
     </div>
 </div>
 
 <main id="main-content">
 
-<div class="header">
-<h1>Our Services</h1>
-<p>
-Global sourcing and supply chain solutions tailored to your technical and commercial requirements.
-</p>
-</div>
+    <div class="hero-bg">
+        <div class="px-6">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Our Services</h1>
+            <p class="max-w-4xl mx-auto text-2xl md:text-3xl font-medium leading-relaxed">
+                Global sourcing and supply chain solutions tailored to your technical and commercial requirements.
+            </p>
+        </div>
+    </div>
 
-<div class="services">
+    <div class="services">
 
-<div class="service-box">
-<h2>Electrical Cables</h2>
-<div class="service-image">
-<img src="images/electrical-cables.jpg" alt="Electrical cables" loading="lazy">
-</div>
-<p>
-GSMB specializes in sourcing low, medium, and high-voltage electrical cables,
-including copper conductor cables and solar PV cables for industrial,
-infrastructure, and renewable energy projects.
-</p>
-</div>
+        <div class="service-box">
+            <h2>Electrical Cables</h2>
+            <div class="service-image">
+                <img src="images/electrical-cables.jpg" alt="Electrical cables" loading="lazy">
+            </div>
+            <p>
+                GSMB specializes in sourcing low, medium, and high-voltage electrical cables,
+                including copper conductor cables and solar PV cables for industrial,
+                infrastructure, and renewable energy projects.
+            </p>
+        </div>
 
-<div class="service-box">
-<h2>PCB & PCBA (IPC Class 3)</h2>
-<div class="service-image">
-<img src="images/pcb-pcba-class3.jpg" alt="PCB manufacturing" loading="lazy">
-</div>
-<p>
-We provide full-service sourcing for printed circuit boards and electronic
-assemblies including SMT, THT, and full traceability.
-</p>
-</div>
+        <div class="service-box">
+            <h2>PCB & PCBA (IPC Class 3)</h2>
+            <div class="service-image">
+                <img src="images/pcb-pcba-class3.jpg" alt="PCB manufacturing" loading="lazy">
+            </div>
+            <p>
+                We provide full-service sourcing for printed circuit boards and electronic
+                assemblies including SMT, THT, and full traceability.
+            </p>
+        </div>
 
-<div class="service-box">
-<h2>Construction Steel & Solar Mounting</h2>
-<div class="service-image">
-<img src="images/steel.jpg" alt="Steel structures" loading="lazy">
-</div>
-<p>
-Structural steel for solar, infrastructure, and construction projects.
-</p>
-</div>
+        <div class="service-box">
+            <h2>Construction Steel & Solar Mounting</h2>
+            <div class="service-image">
+                <img src="images/steel.jpg" alt="Steel structures" loading="lazy">
+            </div>
+            <p>
+                Structural steel for solar, infrastructure, and construction projects.
+            </p>
+        </div>
 
-<div class="service-box">
-<h2>Industrial Mechanical Assemblies</h2>
-<div class="service-image">
-<img src="images/mechanical-assemblies.jpg" alt="Mechanical assemblies" loading="lazy">
-</div>
-<p>
-Welded structures, machined components, and integrated assemblies
-for OEM clients.
-</p>
-</div>
+        <div class="service-box">
+            <h2>Industrial Mechanical Assemblies</h2>
+            <div class="service-image">
+                <img src="images/mechanical-assemblies.jpg" alt="Mechanical assemblies" loading="lazy">
+            </div>
+            <p>
+                Welded structures, machined components, and integrated assemblies
+                for OEM clients.
+            </p>
+        </div>
 
-<div class="service-box">
-<h2>Worldwide Coverage & Strategic Sourcing</h2>
-<p>
-Global operations across North America, Europe, LATAM,
-Middle East, and Asia with controlled risk and transparency.
-</p>
-</div>
+        <div class="service-box">
+            <h2>Worldwide Coverage & Strategic Sourcing</h2>
+            <p>
+                Global operations across North America, Europe, LATAM,
+                Middle East, and Asia with controlled risk and transparency.
+            </p>
+        </div>
 
-</div>
+    </div>
 
-<section class="gsmc-cta">
-<h2 class="text-4xl md:text-5xl font-bold mb-6">
-Let’s Optimize Your Procurement
-</h2>
-<p class="text-lg md:text-xl mb-4">
-If GSMB cannot offer better value than your current setup,
-it simply means your procurement is already excellent.
-</p>
-<p class="text-xl md:text-2xl font-bold mb-6">
-But most of the time — WE CAN.
-</p>
-<a href="mailto:info@gsmb.net" class="cta-button">
-Contact Us
-</a>
-</section>
+    <section class="gsmc-cta">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Let’s Optimize Your Procurement
+        </h2>
+        <p class="text-lg md:text-xl mb-4">
+            If GSMB cannot offer better value than your current setup,
+            it simply means your procurement is already excellent.
+        </p>
+        <p class="text-xl md:text-2xl font-bold mb-6">
+            But most of the time — WE CAN.
+        </p>
+        <a href="mailto:info@gsmb.net" class="cta-button">
+            Contact Us
+        </a>
+    </section>
 
 </main>
 
@@ -273,48 +279,39 @@ Contact Us
 </footer>
 
 <script>
-// ✨ Mobile Menu Script ✨
-const menuBtn = document.getElementById("mobile-menu-button");
-const mobileMenu = document.getElementById("mobile-menu");
-const menuLinks = mobileMenu.querySelectorAll("a");
+    // 🎀 Mobile Menu Logic 🎀
+    const menuBtn = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuLinks = mobileMenu.querySelectorAll("a");
 
-menuBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    mobileMenu.classList.toggle("hidden");
-});
-
-// Close menu when clicking a link
-menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
+    menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("hidden");
     });
-});
 
-// Close menu when clicking outside
-document.addEventListener("click", (e) => {
-    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-        mobileMenu.classList.add("hidden");
-    }
-});
-
-// Fade in main content after load
-window.addEventListener('load', () => {
-    document.getElementById('main-content').style.opacity = 1;
-
-    // Animate each service box
-    document.querySelectorAll('.service-box').forEach((el, i) => {
-        setTimeout(() => el.classList.add('visible'), i * 200);
+    menuLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+        });
     });
-});
+
+    // Close menu if clicking outside
+    document.addEventListener("click", (e) => {
+        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+            mobileMenu.classList.add("hidden");
+        }
+    });
+
+    // Fade in main content after load
+    window.addEventListener('load', () => {
+        document.getElementById('main-content').style.opacity = 1;
+
+        // Animate each service box
+        document.querySelectorAll('.service-box').forEach((el, i) => {
+            setTimeout(() => el.classList.add('visible'), i * 150);
+        });
+    });
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
