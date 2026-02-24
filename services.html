@@ -2,26 +2,18 @@
 <html lang="en">
 <head>
     <link rel="icon" href="favicon.png" type="image/png">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Global Sourcing & OEM Procurement Services | GSMB</title>
-
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80">
-
     <link rel="icon" type="image/png" href="/favicon.png">
-
     <meta name="description" content="Global sourcing and supply chain services across North America, Europe, LATAM, and Asia.">
     <link rel="canonical" href="https://www.gsmb.net/services.html">
-
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         html { scroll-behavior: smooth; }
-        
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
@@ -31,14 +23,11 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
         main {
             flex: 1;
             opacity: 0;
             transition: opacity 0.4s ease-in;
         }
-
-        /* 💎 EXACT MATCH to About Page Hero Style 💎 */
         .hero-bg {
             background: linear-gradient(rgba(0, 51, 102, 0.75), rgba(0, 51, 102, 0.75)), 
             url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80');
@@ -52,22 +41,18 @@
             color: white;
             width: 100%;
         }
-
-        /* 🌍 Global Network Intro */
         .network-intro {
             background: white;
             padding: 70px 24px;
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
         }
-
-        /* Specialty Content */
+        /* ✨ MATCHING LIVE SITE WIDTH (1000px) ✨ */
         .services-container {
             max-width: 1000px; 
             margin: auto;
             padding: 60px 24px;
         }
-
         .service-box {
             background: white;
             padding: 45px;
@@ -78,12 +63,13 @@
             transform: translateY(20px);
             transition: all 0.5s ease-out;
         }
-
+        @media (max-width: 640px) {
+            .service-box { padding: 30px 20px; }
+        }
         .service-box.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
         .service-box h2 {
             color: #003366;
             font-size: 28px;
@@ -92,29 +78,24 @@
             border-left: 5px solid #ff6600;
             padding-left: 15px;
         }
-
         .service-image img {
             width: 100%;
             border-radius: 8px;
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            margin-bottom: 25px;
         }
-
         .service-box p {
             font-size: 20px; 
             line-height: 1.8;
             color: #0f172a; 
-            font-weight: 500; 
-            margin-top: 25px;
+            font-weight: 500;
         }
-
-        /* CTA Section */
         .gsmc-cta {
             background: linear-gradient(135deg, #003366, #006699);
             color: #fff;
             text-align: center;
             padding: 80px 24px;
         }
-
         .cta-button {
             display: inline-block;
             margin-top: 32px;
@@ -129,7 +110,6 @@
             letter-spacing: 0.05em;
         }
     </style>
-
 </head>
 
 <body class="bg-slate-50 font-sans">
@@ -140,14 +120,12 @@
             <img src="logo.png" alt="GSMB Logo" class="h-16 md:h-24 w-auto border-0 object-contain">
         </a>
     </div>
-
     <div class="hidden md:flex space-x-10 font-semibold text-[#003366] text-lg">
         <a href="index.html" class="hover:text-blue-600 transition">Home</a>
         <a href="about.html" class="hover:text-blue-600 transition">About</a>
         <a href="services.html" class="text-blue-600">Services</a>
         <a href="index.html#contact" class="hover:text-blue-600 transition">Contact</a>
     </div>
-
     <div class="md:hidden flex items-center">
         <button id="mobile-menu-button" class="text-[#003366] text-3xl focus:outline-none">
             <i class="fas fa-bars"></i>
@@ -165,7 +143,6 @@
 </div>
 
 <main id="main-content">
-
     <header class="hero-bg px-6">
         <div>
             <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
@@ -185,25 +162,39 @@
     </section>
 
     <div class="pt-16 text-center">
-        <h3 class="text-slate-400 uppercase tracking-[0.3em] font-bold text-sm">Some of our specialities</h3>
+        <h3 class="text-slate-400 uppercase tracking-[0.3em] font-bold text-sm">Below some of our specialities</h3>
         <div class="w-16 h-1 bg-[#ff6600] mx-auto mt-4"></div>
     </div>
 
     <div class="services-container">
         <div class="service-box">
-            <h2>Electrical Cables</h2>
+            <h2>Electrical Cables & Cabling Solutions</h2>
             <div class="service-image">
-                <img src="images/electrical-cables.jpg" alt="Electrical cables" loading="lazy">
+                <img src="images/cables.jpg" alt="Industrial electrical cables" loading="lazy">
             </div>
-            <p>GSMB specializes in low, medium, and high-voltage electrical cables—from copper and aluminum to solar PV. We power industrial, infrastructure, and renewable energy projects worldwide.</p>
+            <p>We supply premium cable solutions for global power grids and urban infrastructure. From high-conductivity <strong>Copper and Aluminum</strong> conductors to specialized <strong>Shielded and Armored</strong> cables, we provide reliable connectivity for the most demanding environments.</p>
+            <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-lg font-medium">
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>Copper & Aluminum Conductors</li>
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>Shielded & Armored LV/MV</li>
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>TÜV, SAA, CE & UL Certified</li>
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>ISO 9001, 14001 & 45001</li>
+            </ul>
+            <p class="mt-8 text-slate-600 border-t pt-4 text-base italic">Our range covers Solar PV, Mining, and Power Grid applications with full compliance to AS/NZS and European CPR standards.</p>
         </div>
 
         <div class="service-box">
-            <h2>PCB & PCBA (IPC Class 3)</h2>
+            <h2>PCB & PCBA (High-Reliability Electronics)</h2>
             <div class="service-image">
-                <img src="images/pcb-pcba-class3.jpg" alt="PCB manufacturing" loading="lazy">
+                <img src="images/pcb-pcba-class3.jpg" alt="High-tech PCB manufacturing" loading="lazy">
             </div>
-            <p>We provide full-service sourcing for printed circuit boards and electronic assemblies including SMT, THT, and full traceability.</p>
+            <p>GSMB provides world-class electronics manufacturing for the most demanding industries. We specialize in <strong>2-48 layer rigid PCBs</strong> and full assemblies that meet the highest global standards for safety and performance.</p>
+            <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-lg font-medium">
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>IPC Class 3 & UL Certified</li>
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>IATF16949 & ISO13485 Standards</li>
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>X-Ray & AOI Inspection</li>
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>SMT, THT & Full Traceability</li>
+            </ul>
+            <p class="mt-8 text-slate-600 border-t pt-4 text-base italic">Certified to ISO9001 and ISO14001, we ensure mission-critical quality for automotive, medical, and industrial aerospace applications.</p>
         </div>
 
         <div class="service-box">
@@ -211,7 +202,14 @@
             <div class="service-image">
                 <img src="images/steel.jpg" alt="Steel structures" loading="lazy">
             </div>
-            <p>Structural steel for solar, infrastructure, and construction projects.</p>
+            <p>GSMB supplies high-grade <strong>W, H, IPE, UPN, SHS, and RHS steel profiles</strong> for global infrastructure and energy projects. From heavy construction to utility-scale solar farms, we provide consistent quality with exceptional finish.</p>
+            <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-lg font-medium">
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>S235 / S275 / S355 Grades</li>
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>Superior HDG Galvanization</li>
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>Global Sourcing Options</li>
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>Highly Competitive Pricing</li>
+            </ul>
+            <p class="mt-8 text-slate-600 border-t pt-4 text-base italic">Ideal for structural frameworks, mounting structures, trackers, and fixed-tilt piles.</p>
         </div>
 
         <div class="service-box">
@@ -219,28 +217,37 @@
             <div class="service-image">
                 <img src="images/mechanical-assemblies.jpg" alt="Mechanical assemblies" loading="lazy">
             </div>
-            <p>Welded structures, machined components, and integrated assemblies for OEM clients.</p>
+            <p>We provide end-to-end manufacturing solutions for complex OEM components. Beyond simple sourcing, we manage <strong>full assembly line integration</strong> tailored to your specific technical requirements.</p>
+            <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-lg font-medium">
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>Custom Jig & Fixture Design</li>
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>Integrated Testing Protocols</li>
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>Precision Machined Components</li>
+                <li class="flex items-center"><i class="fas fa-circle text-[#ff6600] text-[8px] mr-3"></i>Professional Packing & Logistics</li>
+            </ul>
+            <p class="mt-8 text-slate-600 border-t pt-4 text-base italic">From welded structures to fully tested mechanical kits, we ensure every unit meets your exact engineering standards.</p>
         </div>
 
         <div class="service-box">
             <h2>Worldwide Coverage & Strategic Sourcing</h2>
-            <p>Global operations across North America, Europe, LATAM, Middle East, and Asia with controlled risk and transparency.</p>
+            <p>GSMB operates as a <strong>global procurement hub</strong> with a vast, established network across North America, Europe, LATAM, the Middle East, and Asia. We don’t just source—we provide a <strong>comprehensive range of industrial products</strong> through a fully integrated supply chain.</p>
+            <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-lg font-medium">
+                <li class="flex items-center"><i class="fas fa-globe text-[#ff6600] mr-3 w-5"></i><strong>Unlimited Range:</strong> Access to any material.</li>
+                <li class="flex items-center"><i class="fas fa-network-wired text-[#ff6600] mr-3 w-5"></i><strong>Full Network:</strong> Boots on the ground globally.</li>
+                <li class="flex items-center"><i class="fas fa-shield-alt text-[#ff6600] mr-3 w-5"></i><strong>Risk Control:</strong> Audited factories & quality.</li>
+                <li class="flex items-center"><i class="fas fa-search-plus text-[#ff6600] mr-3 w-5"></i><strong>Transparency:</strong> Full supply chain visibility.</li>
+            </ul>
+            <p class="mt-8 text-slate-600 border-t pt-4 text-base italic">From specialized electronics to heavy raw materials, our worldwide infrastructure ensures you have the right products, delivered anywhere on the planet.</p>
         </div>
     </div>
 
     <section class="gsmc-cta">
         <h2 class="text-4xl md:text-5xl font-bold mb-6">Let’s Optimize Your Procurement</h2>
         <div class="max-w-3xl mx-auto mb-10 space-y-4">
-            <p class="text-lg md:text-xl opacity-90">
-                If GSMB cannot offer better value than your current setup, it simply means your procurement is already excellent.
-            </p>
-            <p class="text-xl md:text-2xl font-bold">
-                But most of the time — WE CAN.
-            </p>
+            <p class="text-lg md:text-xl opacity-90">If GSMB cannot offer better value than your current setup, it simply means your procurement is already excellent.</p>
+            <p class="text-xl md:text-2xl font-bold">But most of the time — WE CAN.</p>
         </div>
         <a href="mailto:info@gsmb.net" class="cta-button">Contact Us</a>
     </section>
-
 </main>
 
 <footer class="bg-[#003366] text-white py-10 px-12 flex flex-col md:flex-row justify-between items-center text-base">
@@ -260,24 +267,17 @@
             setTimeout(() => el.classList.add('visible'), i * 120);
         });
     });
-
-    // ✨ FIXED Mobile Menu Logic ✨
     const menuBtn = document.getElementById("mobile-menu-button");
     const mobileMenu = document.getElementById("mobile-menu");
-    
     menuBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         mobileMenu.classList.toggle("hidden");
     });
-
-    // Close menu when clicking a link
     mobileMenu.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", () => {
             mobileMenu.classList.add("hidden");
         });
     });
-
-    // Close menu when clicking outside
     document.addEventListener("click", (e) => {
         if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
             mobileMenu.classList.add("hidden");
@@ -286,9 +286,4 @@
 </script>
 
 </body>
-
 </html>
-
-
-
-
